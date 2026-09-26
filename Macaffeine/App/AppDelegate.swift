@@ -35,16 +35,27 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         awakeManager?.deactivate()
     }
 
-    // never visible for a menu bar app, but gives the settings window ⌘W and ⌘Q
+    // click on the Dock icon while settings are open
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        settingsWindow?.show()
+        return false
+    }
+
+    // only shown while the settings window is open
     private func installMainMenu() {
         let appMenu = NSMenu()
-        appMenu.addItem(withTitle: String(localized: "Close Window"), action: #selector(NSWindow.performClose), keyEquivalent: "w")
         appMenu.addItem(withTitle: String(localized: "Quit Macaffeine"), action: #selector(NSApplication.terminate), keyEquivalent: "q")
 
-        let appItem = NSMenuItem()
-        appItem.submenu = appMenu
+        let windowMenu = NSMenu(title: String(localized: "Window"))
+        windowMenu.addItem(withTitle: String(localized: "Close"), action: #selector(NSWindow.performClose), keyEquivalent: "w")
+
         let mainMenu = NSMenu()
-        mainMenu.addItem(appItem)
+        for submenu in [appMenu, windowMenu] {
+            let item = NSMenuItem()
+            item.submenu = submenu
+            mainMenu.addItem(item)
+        }
         NSApplication.shared.mainMenu = mainMenu
+        NSApplication.shared.windowsMenu = windowMenu
     }
 }

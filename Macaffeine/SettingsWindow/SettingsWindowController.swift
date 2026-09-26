@@ -2,7 +2,7 @@ import AppKit
 import SwiftUI
 
 @MainActor
-final class SettingsWindowController {
+final class SettingsWindowController: NSObject, NSWindowDelegate {
     private let settings: SettingsStore
     private var window: NSWindow?
 
@@ -14,6 +14,8 @@ final class SettingsWindowController {
         let window = window ?? makeWindow()
         self.window = window
 
+        // show up in the Dock and ⌘Tab while settings are open
+        NSApplication.shared.setActivationPolicy(.regular)
         if #available(macOS 14, *) {
             NSApplication.shared.activate()
         } else {
@@ -24,11 +26,16 @@ final class SettingsWindowController {
         window.orderFrontRegardless()
     }
 
+    func windowWillClose(_ notification: Notification) {
+        NSApplication.shared.setActivationPolicy(.accessory)
+    }
+
     private func makeWindow() -> NSWindow {
         let window = NSWindow(contentViewController: NSHostingController(rootView: SettingsView(settings: settings)))
         window.title = String(localized: "Macaffeine Settings")
         window.styleMask = [.titled, .closable]
         window.isReleasedWhenClosed = false
+        window.delegate = self
         window.center()
         return window
     }
