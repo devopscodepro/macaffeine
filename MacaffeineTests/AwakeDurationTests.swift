@@ -9,21 +9,28 @@ struct AwakeDurationTests {
         #expect(AwakeDuration.indefinite.expiration(from: start) == nil)
     }
 
-    @Test(arguments: [
-        (AwakeDuration.minutes30, 30.0),
-        (.hour1, 60),
-        (.hours2, 120),
-        (.hours4, 240),
-        (.hours8, 480),
-    ])
-    func expirationAddsDuration(duration: AwakeDuration, minutes: Double) {
-        #expect(duration.expiration(from: start) == start.addingTimeInterval(minutes * 60))
+    @Test(arguments: [5, 30, 60, 300, 1440])
+    func expirationAddsMinutes(minutes: Int) {
+        let expected = start.addingTimeInterval(TimeInterval(minutes * 60))
+        #expect(AwakeDuration.minutes(minutes).expiration(from: start) == expected)
     }
 
-    @Test func rawValuesAreStable() {
-        #expect(AwakeDuration.allCases.map(\.rawValue) == [
-            "indefinite", "minutes30", "hour1", "hours2", "hours4", "hours8",
-        ])
+    @Test func storedMinutesRoundTrip() {
+        #expect(AwakeDuration(storedMinutes: 0) == .indefinite)
+        #expect(AwakeDuration(storedMinutes: -1) == .indefinite)
+        #expect(AwakeDuration(storedMinutes: 90) == .minutes(90))
+        #expect(AwakeDuration.indefinite.storedMinutes == 0)
+        #expect(AwakeDuration.minutes(90).storedMinutes == 90)
+    }
+
+    @Test(arguments: [
+        (5, "5 minutes"),
+        (60, "1 hour"),
+        (90, "1 hour, 30 minutes"),
+        (300, "5 hours"),
+    ])
+    func formatsTitle(minutes: Int, expected: String) {
+        #expect(DurationTitle.format(minutes: minutes, locale: Locale(identifier: "en")) == expected)
     }
 
     @Test(arguments: [

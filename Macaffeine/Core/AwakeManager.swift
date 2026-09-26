@@ -81,7 +81,7 @@ final class AwakeManager {
             scheduler.cancel()
         }
         state = .active(until: until)
-        Log.awake.info("Keep awake on, duration: \(self.duration.rawValue, privacy: .public)")
+        Log.awake.info("Keep awake on for \(self.duration.storedMinutes) min (0 = indefinite)")
     }
 
     private func expire() {

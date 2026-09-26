@@ -1,37 +1,48 @@
 import Foundation
 
-enum AwakeDuration: String, CaseIterable, Sendable {
+enum AwakeDuration: Hashable, Sendable {
     case indefinite
-    case minutes30
-    case hour1
-    case hours2
-    case hours4
-    case hours8
+    case minutes(Int)
+
+    static let defaultPresets = [5, 10, 15, 30, 60, 120, 180, 240, 300]
+    static let maxMinutes = 24 * 60
+
+    // 0 is what we store for indefinite
+    init(storedMinutes: Int) {
+        self = storedMinutes > 0 ? .minutes(storedMinutes) : .indefinite
+    }
+
+    var storedMinutes: Int {
+        if case .minutes(let minutes) = self { minutes } else { 0 }
+    }
 
     var interval: TimeInterval? {
-        switch self {
-        case .indefinite: nil
-        case .minutes30: 30 * 60
-        case .hour1: 60 * 60
-        case .hours2: 2 * 60 * 60
-        case .hours4: 4 * 60 * 60
-        case .hours8: 8 * 60 * 60
-        }
+        if case .minutes(let minutes) = self { TimeInterval(minutes * 60) } else { nil }
     }
 
     var title: String {
         switch self {
         case .indefinite: String(localized: "Indefinite")
-        case .minutes30: String(localized: "30 minutes")
-        case .hour1: String(localized: "1 hour")
-        case .hours2: String(localized: "2 hours")
-        case .hours4: String(localized: "4 hours")
-        case .hours8: String(localized: "8 hours")
+        case .minutes(let minutes): DurationTitle.format(minutes: minutes)
         }
     }
 
     func expiration(from start: Date) -> Date? {
         interval.map { start.addingTimeInterval($0) }
+    }
+}
+
+enum DurationTitle {
+    // follow the app's UI language, not the system region, so the menu isn't mixed
+    static func format(minutes: Int, locale: Locale = Locale(identifier: Bundle.main.preferredLocalizations.first ?? "en")) -> String {
+        var calendar = Calendar.current
+        calendar.locale = locale
+
+        let formatter = DateComponentsFormatter()
+        formatter.calendar = calendar
+        formatter.unitsStyle = .full
+        formatter.allowedUnits = [.hour, .minute]
+        return formatter.string(from: TimeInterval(minutes * 60)) ?? "\(minutes) min"
     }
 }
 

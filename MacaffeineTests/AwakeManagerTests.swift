@@ -33,7 +33,7 @@ struct AwakeManagerTests {
     }
 
     @Test func activateWithDurationSchedulesExpiration() {
-        let manager = makeManager(duration: .hour1)
+        let manager = makeManager(duration: .minutes(60))
 
         manager.activate()
 
@@ -44,7 +44,7 @@ struct AwakeManagerTests {
     }
 
     @Test func deactivateReleasesAndCancels() {
-        let manager = makeManager(duration: .hour1)
+        let manager = makeManager(duration: .minutes(60))
         manager.activate()
 
         manager.deactivate()
@@ -84,7 +84,7 @@ struct AwakeManagerTests {
     }
 
     @Test func expirationTurnsItOff() {
-        let manager = makeManager(duration: .minutes30)
+        let manager = makeManager(duration: .minutes(30))
         manager.activate()
 
         clock.advance(by: 1800)
@@ -95,7 +95,7 @@ struct AwakeManagerTests {
     }
 
     @Test func remainingCountsDown() throws {
-        let manager = makeManager(duration: .hours2)
+        let manager = makeManager(duration: .minutes(120))
         manager.activate()
 
         clock.advance(by: 1080)
@@ -107,19 +107,19 @@ struct AwakeManagerTests {
     @Test func selectingDurationWhileInactiveActivates() {
         let manager = makeManager()
 
-        manager.select(.hours4)
+        manager.select(.minutes(240))
 
-        #expect(manager.duration == .hours4)
+        #expect(manager.duration == .minutes(240))
         #expect(manager.state == .active(until: clock.now.addingTimeInterval(4 * 3600)))
         #expect(assertion.isHeld)
     }
 
     @Test func selectingDurationWhileActiveRestartsFromNow() {
-        let manager = makeManager(duration: .hour1)
+        let manager = makeManager(duration: .minutes(60))
         manager.activate()
         clock.advance(by: 600)
 
-        manager.select(.hours2)
+        manager.select(.minutes(120))
 
         let until = clock.now.addingTimeInterval(7200)
         #expect(manager.state == .active(until: until))
@@ -128,7 +128,7 @@ struct AwakeManagerTests {
     }
 
     @Test func selectingIndefiniteWhileActiveDropsExpiration() {
-        let manager = makeManager(duration: .hour1)
+        let manager = makeManager(duration: .minutes(60))
         manager.activate()
 
         manager.select(.indefinite)
@@ -140,7 +140,7 @@ struct AwakeManagerTests {
 
     @Test func failedAcquireStaysInactive() {
         assertion.failOnAcquire = true
-        let manager = makeManager(duration: .hour1)
+        let manager = makeManager(duration: .minutes(60))
 
         manager.activate()
 
@@ -149,7 +149,7 @@ struct AwakeManagerTests {
     }
 
     @Test func notifiesOnStateChange() {
-        let manager = makeManager(duration: .hour1)
+        let manager = makeManager(duration: .minutes(60))
         var states: [AwakeState] = []
         manager.onChange = { states.append($0) }
 

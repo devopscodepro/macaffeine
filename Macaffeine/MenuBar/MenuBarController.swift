@@ -43,10 +43,10 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         menu.addItem(.separator())
         menu.addItem(sectionHeader(String(localized: "Duration")))
 
-        for duration in AwakeDuration.allCases {
+        for duration in settings.durations {
             let item = NSMenuItem(title: duration.title, action: #selector(selectDuration), keyEquivalent: "")
             item.target = self
-            item.representedObject = duration.rawValue
+            item.representedObject = duration.storedMinutes
             menu.addItem(item)
             durationItems.append((duration, item))
         }
@@ -105,8 +105,8 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     }
 
     @objc private func selectDuration(_ sender: NSMenuItem) {
-        guard let raw = sender.representedObject as? String,
-              let duration = AwakeDuration(rawValue: raw) else { return }
+        guard let minutes = sender.representedObject as? Int else { return }
+        let duration = AwakeDuration(storedMinutes: minutes)
         settings.duration = duration
         manager.select(duration)
     }
