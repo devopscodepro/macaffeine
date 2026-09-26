@@ -9,6 +9,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var hotKey: GlobalHotKey?
     private var safetyGuard: SafetyGuard?
     private var notifier: Notifier?
+    // URLs that launched the app arrive before it's set up
+    private var pendingURLs: [URL] = []
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         // unit tests use the app as a host, keep the menu bar clean there
@@ -40,10 +42,41 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             manager.toggle()
         }
         installMainMenu()
+
+        handle(pendingURLs)
+        pendingURLs = []
     }
 
     func applicationWillTerminate(_ notification: Notification) {
         awakeManager?.deactivate()
+    }
+
+    func application(_ application: NSApplication, open urls: [URL]) {
+        guard awakeManager != nil else {
+            pendingURLs += urls
+            return
+        }
+        handle(urls)
+    }
+
+    private func handle(_ urls: [URL]) {
+        guard let manager = awakeManager else { return }
+
+        for url in urls {
+            guard let command = AwakeCommand.parse(url, now: Date()) else {
+                Log.awake.error("Unknown URL: \(url.absoluteString, privacy: .public)")
+                continue
+            }
+            switch command {
+            case .activate(nil): manager.activate()
+            case .activate(.indefinite?): manager.activate(until: nil)
+            case .activate(.date(let date)?): manager.activate(until: date)
+            case .deactivate: manager.deactivate()
+            case .toggle: manager.toggle()
+            case .hold(let hold): manager.hold(hold)
+            case .release(let id): manager.release(holdID: id)
+            }
+        }
     }
 
     // click on the Dock icon while settings are open

@@ -96,7 +96,7 @@ final class AwakeManager {
         startSession(until: duration.expiration(from: now()))
     }
 
-    func activate(until date: Date) {
+    func activate(until date: Date?) {
         guard acquireIfNeeded() else { return }
         startSession(until: date)
     }
