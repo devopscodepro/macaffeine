@@ -34,9 +34,6 @@ final class StatusHeaderView: NSView {
             detailLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 1),
             detailLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -6),
         ])
-
-        setAccessibilityElement(true)
-        setAccessibilityRole(.staticText)
     }
 
     @available(*, unavailable)
@@ -48,7 +45,6 @@ final class StatusHeaderView: NSView {
         dot.tone = status.tone
         titleLabel.stringValue = status.title
         detailLabel.stringValue = status.detail
-        setAccessibilityLabel("\(status.title). \(status.detail)")
 
         let width = max(frame.width, fittingSize.width)
         setFrameSize(NSSize(width: width, height: fittingSize.height))

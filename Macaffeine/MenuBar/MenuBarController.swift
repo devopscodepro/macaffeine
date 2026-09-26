@@ -11,6 +11,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let menu = NSMenu()
     private let toggleItem = NSMenuItem()
     private let headerView = StatusHeaderView()
+    private let headerItem = NSMenuItem()
     private let durationMenu = NSMenu()
     private let displayItem = NSMenuItem()
     private var durationItems: [(AwakeDuration, NSMenuItem)] = []
@@ -41,7 +42,6 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private func buildMenu() {
         menu.autoenablesItems = false
 
-        let headerItem = NSMenuItem()
         headerItem.view = headerView
         menu.addItem(headerItem)
         menu.addItem(.separator())
@@ -95,7 +95,10 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let isActive = manager.isActive
 
         toggleItem.state = isActive ? .on : .off
-        headerView.configure(with: MenuStatus(state: manager.state, holds: manager.holds, stopReason: manager.stopReason, now: Date()))
+        let status = MenuStatus(state: manager.state, holds: manager.holds, stopReason: manager.stopReason, now: Date())
+        headerView.configure(with: status)
+        // not drawn because of the custom view, but VoiceOver reads it
+        headerItem.title = "\(status.title). \(status.detail)"
 
         displayItem.state = settings.keepDisplayOn ? .on : .off
 
