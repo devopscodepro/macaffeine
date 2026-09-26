@@ -17,6 +17,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Safety rules, on by default: stop on battery below a chosen level, in Low Power Mode, or when the Mac overheats. They also prevent turning it on in those conditions.
 - The menu header explains why keep awake stopped: timer finished, battery, Low Power Mode, heat, or macOS refusing the request.
 - Optional notification when keep awake stops on its own.
+- `macaffeine` command line tool: `run -- <command>` keeps the Mac awake while a command runs, plus `on`, `off`, `toggle`, `hold` and `release`.
+- `macaffeine://` URL scheme for scripts and other apps.
+- Holds: requests from scripts and tools live next to the manual session, show up in the menu ("While make is running") and go away when their process exits.
+- Shortcuts actions: Keep Mac Awake, Allow Mac to Sleep, Toggle Keep Awake, Is Mac Kept Awake.
+- Until… in the duration menu to keep awake until a time of day.
+- Ready-made Claude Code hooks, see docs/automation.md.
 - Your own duration presets (add, remove, restore defaults).
 - Keep awake turns off by itself when the duration ends, including after the Mac wakes from sleep.
 - Global hotkey ⌃⌥⌘K to toggle.
