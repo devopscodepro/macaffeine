@@ -16,6 +16,9 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let displayItem = NSMenuItem()
     private var durationItems: [(AwakeDuration, NSMenuItem)] = []
     private let untilItem = NSMenuItem()
+    private let blockersItem = NSMenuItem()
+    private let blockersMenu = NSMenu()
+    private var blockers: [SleepBlocker] = []
     private var refreshTimer: Timer?
     private var subscriptions: Set<AnyCancellable> = []
 
@@ -59,6 +62,12 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         durationItem.submenu = durationMenu
         menu.addItem(durationItem)
 
+        blockersItem.title = String(localized: "Also Keeping Your Mac Awake")
+        blockersMenu.autoenablesItems = false
+        blockersItem.submenu = blockersMenu
+        blockersItem.isHidden = true
+        menu.addItem(blockersItem)
+
         displayItem.title = String(localized: "Keep Display On")
         displayItem.target = self
         displayItem.action = #selector(toggleDisplay)
@@ -101,7 +110,13 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let isActive = manager.isActive
 
         toggleItem.state = isActive ? .on : .off
-        let status = MenuStatus(state: manager.state, holds: manager.holds, stopReason: manager.stopReason, now: Date())
+        let status = MenuStatus(
+            state: manager.state,
+            holds: manager.holds,
+            stopReason: manager.stopReason,
+            othersKeepAwake: !blockers.isEmpty,
+            now: Date()
+        )
         headerView.configure(with: status)
         // not drawn because of the custom view, but VoiceOver reads it
         headerItem.title = "\(status.title). \(status.detail)"
@@ -136,6 +151,44 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         manager.select(duration)
     }
 
+    private func rebuildBlockersMenu() {
+        blockers = SleepBlockers.current()
+        blockersMenu.removeAllItems()
+        blockersItem.isHidden = blockers.isEmpty
+
+        for blocker in blockers {
+            let item = NSMenuItem()
+            let name = blocker.parent.map { "\(blocker.process) (\($0))" } ?? blocker.process
+            let title = NSMutableAttributedString(string: name)
+            if !blocker.reason.isEmpty {
+                title.append(NSAttributedString(
+                    string: "  \(blocker.reason)",
+                    attributes: [.foregroundColor: NSColor.secondaryLabelColor, .font: NSFont.menuFont(ofSize: NSFont.smallSystemFontSize)]
+                ))
+            }
+            item.attributedTitle = title
+            item.setAccessibilityLabel(blocker.reason.isEmpty ? name : "\(name), \(blocker.reason)")
+
+            if let app = NSRunningApplication(processIdentifier: blocker.pid) {
+                item.image = app.icon.map { icon in
+                    icon.size = NSSize(width: 16, height: 16)
+                    return icon
+                }
+                item.representedObject = blocker.pid
+                item.target = self
+                item.action = #selector(showBlockingApp)
+            } else {
+                item.image = NSImage(systemSymbolName: "terminal", accessibilityDescription: nil)
+            }
+            blockersMenu.addItem(item)
+        }
+    }
+
+    @objc private func showBlockingApp(_ sender: NSMenuItem) {
+        guard let pid = sender.representedObject as? pid_t else { return }
+        NSRunningApplication(processIdentifier: pid)?.activate(options: [])
+    }
+
     @objc private func chooseEndTime() {
         guard let date = EndTimePicker.run(initial: suggestedEndTime()) else { return }
         manager.activate(until: date)
@@ -161,6 +214,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
 
     func menuWillOpen(_ menu: NSMenu) {
         rebuildDurationMenu()
+        rebuildBlockersMenu()
         update()
 
         let timer = Timer(timeInterval: 1, repeats: true) { [weak self] _ in

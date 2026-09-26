@@ -77,4 +77,17 @@ struct MenuStatusTests {
 
         #expect(status.detail == "Until you turn it off")
     }
+
+    @Test func offButOthersKeepAwake() {
+        let status = MenuStatus(state: .inactive, stopReason: nil, othersKeepAwake: true, now: now)
+
+        #expect(status.title == "Macaffeine is off")
+        #expect(status.detail == "Other apps are keeping your Mac awake")
+    }
+
+    @Test func stopReasonWinsOverOthers() {
+        let status = MenuStatus(state: .inactive, stopReason: .lowPowerMode, othersKeepAwake: true, now: now)
+
+        #expect(status.tone == .warning)
+    }
 }

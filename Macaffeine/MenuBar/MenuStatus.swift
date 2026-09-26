@@ -16,6 +16,7 @@ struct MenuStatus: Equatable {
         state: AwakeState,
         holds: [Hold] = [],
         stopReason: StopReason?,
+        othersKeepAwake: Bool = false,
         now: Date,
         timeFormatter: DateFormatter = MenuStatus.timeFormatter
     ) {
@@ -62,6 +63,10 @@ struct MenuStatus: Equatable {
             tone = .error
             title = String(localized: "Couldn't keep your Mac awake")
             detail = String(localized: "macOS refused the request. Try again.")
+        case (.inactive, nil) where othersKeepAwake:
+            tone = .idle
+            title = String(localized: "Macaffeine is off")
+            detail = String(localized: "Other apps are keeping your Mac awake")
         case (.inactive, nil):
             tone = .idle
             title = String(localized: "Your Mac can sleep")
