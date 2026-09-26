@@ -1,0 +1,54 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+
+# Xcode
+build/
+DerivedData/
+*.xcuserstate
+*.xccheckout
+*.moved-aside
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+xcuserdata/
+*.xcscmblueprint
+*.xcresult
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+.build/
+.swiftpm/
+Packages/
+Package.resolved
+
+# Release artifacts
+*.zip
+*.dmg
+dist/
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Local AI tooling
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+PROMT.md
+AGENTS.md
+.cursor/
+.cursorrules
+.aider*
+.copilot/
+.codex/
+.gemini/
