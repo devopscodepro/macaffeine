@@ -3,7 +3,7 @@ import Carbon.HIToolbox
 
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
-    private var awakeManager: AwakeManager?
+    private(set) var awakeManager: AwakeManager?
     private var menuBarController: MenuBarController?
     private var settingsWindow: SettingsWindowController?
     private var hotKey: GlobalHotKey?
