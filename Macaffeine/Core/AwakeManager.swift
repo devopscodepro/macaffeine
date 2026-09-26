@@ -14,6 +14,16 @@ final class AwakeManager {
     }
     // changing it directly only affects the next activation, use select() to restart the countdown
     var duration: AwakeDuration
+    var keepDisplayOn: Bool {
+        didSet {
+            guard isActive, keepDisplayOn != oldValue else { return }
+            do {
+                try assertion.acquire(keepDisplayOn: keepDisplayOn)
+            } catch {
+                Log.awake.error("Could not switch display mode: \(String(describing: error), privacy: .public)")
+            }
+        }
+    }
     var onChange: ((AwakeState) -> Void)?
 
     private let assertion: PowerAssertionManaging
@@ -24,11 +34,13 @@ final class AwakeManager {
         assertion: PowerAssertionManaging,
         scheduler: ExpirationScheduling,
         duration: AwakeDuration = .indefinite,
+        keepDisplayOn: Bool = false,
         now: @escaping () -> Date = Date.init
     ) {
         self.assertion = assertion
         self.scheduler = scheduler
         self.duration = duration
+        self.keepDisplayOn = keepDisplayOn
         self.now = now
     }
 
@@ -49,7 +61,7 @@ final class AwakeManager {
         guard !isActive else { return }
 
         do {
-            try assertion.acquire()
+            try assertion.acquire(keepDisplayOn: keepDisplayOn)
         } catch {
             Log.awake.error("Could not keep the Mac awake: \(String(describing: error), privacy: .public)")
             return

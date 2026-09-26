@@ -2,7 +2,7 @@ import IOKit.pwr_mgt
 
 protocol PowerAssertionManaging: AnyObject {
     var isHeld: Bool { get }
-    func acquire() throws
+    func acquire(keepDisplayOn: Bool) throws
     func release()
 }
 
@@ -16,6 +16,7 @@ struct PowerAssertionError: Error, CustomStringConvertible {
 
 final class IOPMPowerAssertionManager: PowerAssertionManaging {
     private var assertionID: IOPMAssertionID?
+    private var keepsDisplayOn = false
 
     var isHeld: Bool { assertionID != nil }
 
@@ -23,13 +24,14 @@ final class IOPMPowerAssertionManager: PowerAssertionManaging {
         release()
     }
 
-    // display is allowed to sleep, only idle system sleep is blocked
-    func acquire() throws {
-        guard assertionID == nil else { return }
+    // the display assertion also blocks idle system sleep, so one assertion is always enough
+    func acquire(keepDisplayOn: Bool) throws {
+        if assertionID != nil, keepsDisplayOn == keepDisplayOn { return }
 
+        let type = keepDisplayOn ? kIOPMAssertPreventUserIdleDisplaySleep : kIOPMAssertPreventUserIdleSystemSleep
         var id = IOPMAssertionID(0)
         let result = IOPMAssertionCreateWithName(
-            kIOPMAssertPreventUserIdleSystemSleep as CFString,
+            type as CFString,
             IOPMAssertionLevel(kIOPMAssertionLevelOn),
             "Macaffeine keeps the Mac awake" as CFString,
             &id
@@ -39,8 +41,13 @@ final class IOPMPowerAssertionManager: PowerAssertionManaging {
             throw PowerAssertionError(code: result)
         }
 
+        // swap after the new one exists so there's no gap
+        if let old = assertionID {
+            IOPMAssertionRelease(old)
+        }
         assertionID = id
-        Log.power.info("Assertion acquired")
+        keepsDisplayOn = keepDisplayOn
+        Log.power.info("Assertion acquired, display on: \(keepDisplayOn)")
     }
 
     func release() {

@@ -12,9 +12,10 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let toggleItem = NSMenuItem()
     private let headerView = StatusHeaderView()
     private let durationMenu = NSMenu()
+    private let displayItem = NSMenuItem()
     private var durationItems: [(AwakeDuration, NSMenuItem)] = []
     private var refreshTimer: Timer?
-    private var durationSubscription: AnyCancellable?
+    private var subscriptions: Set<AnyCancellable> = []
 
     init(manager: AwakeManager, settings: SettingsStore, openSettings: @escaping () -> Void) {
         self.manager = manager
@@ -28,7 +29,12 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         statusItem.button?.toolTip = "Macaffeine"
 
         manager.onChange = { [weak self] _ in self?.update() }
-        durationSubscription = settings.$duration.sink { [weak manager] in manager?.duration = $0 }
+        settings.$duration
+            .sink { [weak manager] in manager?.duration = $0 }
+            .store(in: &subscriptions)
+        settings.$keepDisplayOn
+            .sink { [weak manager] in manager?.keepDisplayOn = $0 }
+            .store(in: &subscriptions)
         update()
     }
 
@@ -51,6 +57,11 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         durationMenu.autoenablesItems = false
         durationItem.submenu = durationMenu
         menu.addItem(durationItem)
+
+        displayItem.title = String(localized: "Keep Display On")
+        displayItem.target = self
+        displayItem.action = #selector(toggleDisplay)
+        menu.addItem(displayItem)
 
         menu.addItem(.separator())
 
@@ -87,6 +98,8 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let status = MenuStatus(state: manager.state, now: Date())
         headerView.configure(isActive: isActive, title: status.title, detail: status.detail)
 
+        displayItem.state = settings.keepDisplayOn ? .on : .off
+
         for (duration, item) in durationItems {
             item.state = duration == manager.duration ? .on : .off
         }
@@ -106,6 +119,11 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let duration = AwakeDuration(storedMinutes: minutes)
         settings.duration = duration
         manager.select(duration)
+    }
+
+    @objc private func toggleDisplay() {
+        settings.keepDisplayOn.toggle()
+        update()
     }
 
     @objc private func showSettings() {

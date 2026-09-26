@@ -16,7 +16,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let manager = AwakeManager(
             assertion: IOPMPowerAssertionManager(),
             scheduler: ExpirationTimer(),
-            duration: settings.duration
+            duration: settings.duration,
+            keepDisplayOn: settings.keepDisplayOn
         )
         let settingsWindow = SettingsWindowController(settings: settings)
 

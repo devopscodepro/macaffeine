@@ -5,6 +5,7 @@ final class SettingsStore: ObservableObject {
     private enum Key {
         static let duration = "durationMinutes"
         static let presets = "presets"
+        static let keepDisplayOn = "keepDisplayOn"
     }
 
     private let defaults: UserDefaults
@@ -17,12 +18,17 @@ final class SettingsStore: ObservableObject {
         didSet { defaults.set(duration.storedMinutes, forKey: Key.duration) }
     }
 
+    @Published var keepDisplayOn: Bool {
+        didSet { defaults.set(keepDisplayOn, forKey: Key.keepDisplayOn) }
+    }
+
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
 
         let stored = defaults.array(forKey: Key.presets) as? [Int]
         presets = stored.map(Self.normalized) ?? AwakeDuration.defaultPresets
         duration = AwakeDuration(storedMinutes: defaults.integer(forKey: Key.duration))
+        keepDisplayOn = defaults.bool(forKey: Key.keepDisplayOn)
     }
 
     var durations: [AwakeDuration] {

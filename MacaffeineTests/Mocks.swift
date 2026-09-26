@@ -5,12 +5,14 @@ final class MockPowerAssertionManager: PowerAssertionManaging {
     private(set) var isHeld = false
     private(set) var acquireCount = 0
     private(set) var releaseCount = 0
+    private(set) var keepsDisplayOn = false
     var failOnAcquire = false
 
-    func acquire() throws {
+    func acquire(keepDisplayOn: Bool) throws {
         if failOnAcquire { throw PowerAssertionError(code: -1) }
         acquireCount += 1
         isHeld = true
+        keepsDisplayOn = keepDisplayOn
     }
 
     func release() {

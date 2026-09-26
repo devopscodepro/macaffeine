@@ -8,9 +8,15 @@ struct AwakeManagerTests {
     let scheduler = MockExpirationScheduler()
     let clock = TestClock()
 
-    func makeManager(duration: AwakeDuration = .indefinite) -> AwakeManager {
+    func makeManager(duration: AwakeDuration = .indefinite, keepDisplayOn: Bool = false) -> AwakeManager {
         let clock = clock
-        return AwakeManager(assertion: assertion, scheduler: scheduler, duration: duration, now: { clock.now })
+        return AwakeManager(
+            assertion: assertion,
+            scheduler: scheduler,
+            duration: duration,
+            keepDisplayOn: keepDisplayOn,
+            now: { clock.now }
+        )
     }
 
     @Test func startsInactive() {
@@ -157,5 +163,33 @@ struct AwakeManagerTests {
         manager.deactivate()
 
         #expect(states == [.active(until: clock.now.addingTimeInterval(3600)), .inactive])
+    }
+
+    @Test func activatesWithDisplayPreference() {
+        let manager = makeManager(keepDisplayOn: true)
+
+        manager.activate()
+
+        #expect(assertion.keepsDisplayOn)
+    }
+
+    @Test func switchingDisplayWhileActiveKeepsCountdown() {
+        let manager = makeManager(duration: .minutes(60))
+        manager.activate()
+        let state = manager.state
+
+        manager.keepDisplayOn = true
+
+        #expect(assertion.keepsDisplayOn)
+        #expect(assertion.acquireCount == 2)
+        #expect(manager.state == state)
+    }
+
+    @Test func switchingDisplayWhileInactiveDoesNotAcquire() {
+        let manager = makeManager()
+
+        manager.keepDisplayOn = true
+
+        #expect(assertion.acquireCount == 0)
     }
 }

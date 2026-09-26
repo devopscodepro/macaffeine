@@ -70,4 +70,12 @@ struct SettingsStoreTests {
 
         #expect(SettingsStore(defaults: defaults).presets == [10, 30])
     }
+
+    @Test func persistsKeepDisplayOn() {
+        #expect(!SettingsStore(defaults: defaults).keepDisplayOn)
+
+        SettingsStore(defaults: defaults).keepDisplayOn = true
+
+        #expect(SettingsStore(defaults: defaults).keepDisplayOn)
+    }
 }
