@@ -59,8 +59,6 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         toggleItem.title = String(localized: "Keep Awake")
         toggleItem.target = self
         toggleItem.action = #selector(toggle)
-        toggleItem.keyEquivalent = "k"
-        toggleItem.keyEquivalentModifierMask = [.control, .option, .command]
         menu.addItem(toggleItem)
 
         let durationItem = NSMenuItem(title: String(localized: "Active for Duration"), action: nil, keyEquivalent: "")
@@ -116,11 +114,14 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let isActive = manager.isActive
 
         toggleItem.state = isActive ? .on : .off
+        toggleItem.keyEquivalent = settings.hotKey?.keyEquivalent ?? ""
+        toggleItem.keyEquivalentModifierMask = settings.hotKey?.modifiers ?? []
         let status = MenuStatus(
             state: manager.state,
             holds: manager.holds,
             stopReason: manager.stopReason,
             othersKeepAwake: !blockers.isEmpty,
+            shortcut: settings.hotKey?.displayString,
             now: Date()
         )
         headerView.configure(with: status)

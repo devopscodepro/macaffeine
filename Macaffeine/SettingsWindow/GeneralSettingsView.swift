@@ -36,8 +36,12 @@ struct GeneralSettingsView: View {
                 }
 
                 LabeledContent("Toggle Keep Awake") {
-                    Text("⌃⌥⌘K")
-                        .foregroundStyle(.secondary)
+                    ShortcutRecorder(settings: settings)
+                }
+                if settings.hotKeyUnavailable {
+                    Text("macOS didn't accept this shortcut. Pick a different one.")
+                        .font(.caption)
+                        .foregroundStyle(.orange)
                 }
             }
 

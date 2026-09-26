@@ -115,4 +115,28 @@ struct SettingsStoreTests {
     @Test func countdownIsOffByDefault() {
         #expect(!SettingsStore(defaults: defaults).showsCountdown)
     }
+
+    @Test func hotKeyDefaultsToCtrlOptCmdK() {
+        #expect(SettingsStore(defaults: defaults).hotKey == .default)
+    }
+
+    @Test func persistsCustomHotKey() {
+        let combo = HotKeyCombo(keyCode: 3, modifiers: [.command, .shift])
+        SettingsStore(defaults: defaults).hotKey = combo
+
+        #expect(SettingsStore(defaults: defaults).hotKey == combo)
+    }
+
+    @Test func persistsDisabledHotKey() {
+        SettingsStore(defaults: defaults).hotKey = nil
+
+        #expect(SettingsStore(defaults: defaults).hotKey == nil)
+    }
+
+    @Test func invalidStoredHotKeyFallsBackToDefault() {
+        defaults.set(40, forKey: "hotKeyCode")
+        defaults.set(0, forKey: "hotKeyModifiers")
+
+        #expect(SettingsStore(defaults: defaults).hotKey == .default)
+    }
 }

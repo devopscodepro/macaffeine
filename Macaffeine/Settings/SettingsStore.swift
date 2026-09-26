@@ -1,4 +1,4 @@
-import Foundation
+import AppKit
 
 @MainActor
 final class SettingsStore: ObservableObject {
@@ -13,6 +13,9 @@ final class SettingsStore: ObservableObject {
         static let notifyOnAutoStop = "notifyOnAutoStop"
         static let stopOnScreenLock = "stopOnScreenLock"
         static let showsCountdown = "showsCountdown"
+        static let hotKeyCode = "hotKeyCode"
+        static let hotKeyModifiers = "hotKeyModifiers"
+        static let hotKeyDisabled = "hotKeyDisabled"
     }
 
     static let batteryThresholds = [10, 15, 20, 25, 30, 40, 50]
@@ -59,6 +62,21 @@ final class SettingsStore: ObservableObject {
         didSet { defaults.set(showsCountdown, forKey: Key.showsCountdown) }
     }
 
+    // nil means the user turned the shortcut off
+    @Published var hotKey: HotKeyCombo? {
+        didSet {
+            defaults.set(hotKey == nil, forKey: Key.hotKeyDisabled)
+            if let hotKey {
+                defaults.set(Int(hotKey.keyCode), forKey: Key.hotKeyCode)
+                defaults.set(Int(hotKey.modifiers.rawValue), forKey: Key.hotKeyModifiers)
+            }
+        }
+    }
+
+    // not saved: set while the recorder listens, so the current shortcut doesn't fire
+    @Published var isRecordingHotKey = false
+    @Published var hotKeyUnavailable = false
+
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
 
@@ -75,6 +93,7 @@ final class SettingsStore: ObservableObject {
         notifyOnAutoStop = defaults.bool(forKey: Key.notifyOnAutoStop)
         stopOnScreenLock = defaults.bool(forKey: Key.stopOnScreenLock)
         showsCountdown = defaults.bool(forKey: Key.showsCountdown)
+        hotKey = Self.loadHotKey(from: defaults)
     }
 
     var safetyRules: SafetyRules {
@@ -110,6 +129,20 @@ final class SettingsStore: ObservableObject {
         if case .minutes(let minutes) = duration, !presets.contains(minutes) {
             duration = .indefinite
         }
+    }
+
+    private static func loadHotKey(from defaults: UserDefaults) -> HotKeyCombo? {
+        if defaults.bool(forKey: Key.hotKeyDisabled) {
+            return nil
+        }
+        guard defaults.object(forKey: Key.hotKeyCode) != nil else {
+            return .default
+        }
+        let combo = HotKeyCombo(
+            keyCode: UInt16(defaults.integer(forKey: Key.hotKeyCode)),
+            modifiers: NSEvent.ModifierFlags(rawValue: UInt(defaults.integer(forKey: Key.hotKeyModifiers)))
+        )
+        return combo.isValid ? combo : .default
     }
 
     private static func normalized(_ values: [Int]) -> [Int] {

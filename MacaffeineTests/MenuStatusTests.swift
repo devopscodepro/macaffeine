@@ -14,7 +14,7 @@ struct MenuStatusTests {
     }
 
     func status(_ state: AwakeState, _ reason: StopReason? = nil) -> MenuStatus {
-        MenuStatus(state: state, stopReason: reason, now: now, timeFormatter: formatter)
+        MenuStatus(state: state, stopReason: reason, shortcut: "⌃⌥⌘K", now: now, timeFormatter: formatter)
     }
 
     @Test func inactive() {
@@ -89,5 +89,11 @@ struct MenuStatusTests {
         let status = MenuStatus(state: .inactive, stopReason: .lowPowerMode, othersKeepAwake: true, now: now)
 
         #expect(status.tone == .warning)
+    }
+
+    @Test func noShortcutHint() {
+        let status = MenuStatus(state: .inactive, stopReason: nil, shortcut: nil, now: now)
+
+        #expect(status.detail == "Choose a duration to keep it awake")
     }
 }

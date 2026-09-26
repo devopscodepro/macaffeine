@@ -1,5 +1,5 @@
 import AppKit
-import Carbon.HIToolbox
+import Combine
 
 @MainActor
 final class AppDelegate: NSObject, NSApplicationDelegate {
@@ -8,6 +8,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var settingsWindow: SettingsWindowController?
     private var hotKey: GlobalHotKey?
     private var safetyGuard: SafetyGuard?
+    private var subscriptions: Set<AnyCancellable> = []
     private var notifier: Notifier?
     // URLs that launched the app arrive before it's set up
     private var pendingURLs: [URL] = []
@@ -38,9 +39,17 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         menuBarController = MenuBarController(manager: manager, settings: settings) {
             settingsWindow.show()
         }
-        hotKey = GlobalHotKey(keyCode: kVK_ANSI_K, modifiers: controlKey | optionKey | cmdKey) {
-            manager.toggle()
-        }
+        let hotKey = GlobalHotKey { manager.toggle() }
+        self.hotKey = hotKey
+        settings.$hotKey
+            .combineLatest(settings.$isRecordingHotKey)
+            .sink { combo, recording in
+                let registered = hotKey.register(recording ? nil : combo)
+                if !recording {
+                    settings.hotKeyUnavailable = !registered
+                }
+            }
+            .store(in: &subscriptions)
         installMainMenu()
 
         handle(pendingURLs)

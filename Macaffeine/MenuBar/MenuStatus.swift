@@ -17,6 +17,7 @@ struct MenuStatus: Equatable {
         holds: [Hold] = [],
         stopReason: StopReason?,
         othersKeepAwake: Bool = false,
+        shortcut: String? = nil,
         now: Date,
         timeFormatter: DateFormatter = MenuStatus.timeFormatter
     ) {
@@ -74,7 +75,8 @@ struct MenuStatus: Equatable {
         case (.inactive, nil):
             tone = .idle
             title = String(localized: "Your Mac can sleep")
-            detail = String(localized: "Choose a duration or press ⌃⌥⌘K")
+            detail = shortcut.map { String(localized: "Choose a duration or press \($0)") }
+                ?? String(localized: "Choose a duration to keep it awake")
         }
     }
 
