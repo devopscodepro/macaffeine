@@ -111,4 +111,8 @@ struct SettingsStoreTests {
 
         #expect(SettingsStore(defaults: defaults).stopOnScreenLock)
     }
+
+    @Test func countdownIsOffByDefault() {
+        #expect(!SettingsStore(defaults: defaults).showsCountdown)
+    }
 }

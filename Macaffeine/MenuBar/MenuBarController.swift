@@ -7,7 +7,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let settings: SettingsStore
     private let openSettings: () -> Void
 
-    private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
+    private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     private let menu = NSMenu()
     private let toggleItem = NSMenuItem()
     private let headerView = StatusHeaderView()
@@ -20,6 +20,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let blockersMenu = NSMenu()
     private var blockers: [SleepBlocker] = []
     private var refreshTimer: Timer?
+    private var countdownTimer: Timer?
     private var subscriptions: Set<AnyCancellable> = []
 
     init(manager: AwakeManager, settings: SettingsStore, openSettings: @escaping () -> Void) {
@@ -39,6 +40,11 @@ final class MenuBarController: NSObject, NSMenuDelegate {
             .store(in: &subscriptions)
         settings.$keepDisplayOn
             .sink { [weak manager] in manager?.keepDisplayOn = $0 }
+            .store(in: &subscriptions)
+        settings.$showsCountdown
+            .dropFirst()
+            .receive(on: RunLoop.main)
+            .sink { [weak self] _ in self?.update() }
             .store(in: &subscriptions)
         update()
     }
@@ -135,6 +141,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         }
 
         statusItem.button?.image = MenuBarIcon.image(isActive: isActive)
+        updateCountdown()
         statusItem.button?.setAccessibilityLabel(isActive
             ? String(localized: "Macaffeine, keeping your Mac awake")
             : String(localized: "Macaffeine, off"))
@@ -149,6 +156,33 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let duration = AwakeDuration(storedMinutes: minutes)
         settings.duration = duration
         manager.select(duration)
+    }
+
+    private func updateCountdown() {
+        guard let button = statusItem.button else { return }
+
+        guard settings.showsCountdown, let remaining = manager.remaining else {
+            button.title = ""
+            button.imagePosition = .imageOnly
+            statusItem.length = NSStatusItem.squareLength
+            countdownTimer?.invalidate()
+            countdownTimer = nil
+            return
+        }
+
+        statusItem.length = NSStatusItem.variableLength
+        button.title = RemainingTime.format(remaining)
+        button.font = .monospacedDigitSystemFont(ofSize: NSFont.systemFontSize(for: .small), weight: .regular)
+        button.imagePosition = .imageLeading
+
+        if countdownTimer == nil {
+            let timer = Timer(timeInterval: 15, repeats: true) { [weak self] _ in
+                MainActor.assumeIsolated { self?.updateCountdown() }
+            }
+            timer.tolerance = 5
+            RunLoop.main.add(timer, forMode: .common)
+            countdownTimer = timer
+        }
     }
 
     private func rebuildBlockersMenu() {

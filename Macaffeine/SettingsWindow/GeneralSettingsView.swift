@@ -30,6 +30,11 @@ struct GeneralSettingsView: View {
                     Text("The screen won't dim or turn off while your Mac is kept awake.")
                 }
 
+                Toggle(isOn: $settings.showsCountdown) {
+                    Text("Show remaining time in the menu bar")
+                    Text("Next to the cup, while a timer is running.")
+                }
+
                 LabeledContent("Toggle Keep Awake") {
                     Text("⌃⌥⌘K")
                         .foregroundStyle(.secondary)

@@ -12,6 +12,7 @@ final class SettingsStore: ObservableObject {
         static let stopWhenOverheating = "stopWhenOverheating"
         static let notifyOnAutoStop = "notifyOnAutoStop"
         static let stopOnScreenLock = "stopOnScreenLock"
+        static let showsCountdown = "showsCountdown"
     }
 
     static let batteryThresholds = [10, 15, 20, 25, 30, 40, 50]
@@ -54,6 +55,10 @@ final class SettingsStore: ObservableObject {
         didSet { defaults.set(stopOnScreenLock, forKey: Key.stopOnScreenLock) }
     }
 
+    @Published var showsCountdown: Bool {
+        didSet { defaults.set(showsCountdown, forKey: Key.showsCountdown) }
+    }
+
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
 
@@ -69,6 +74,7 @@ final class SettingsStore: ObservableObject {
         stopWhenOverheating = defaults.object(forKey: Key.stopWhenOverheating) as? Bool ?? true
         notifyOnAutoStop = defaults.bool(forKey: Key.notifyOnAutoStop)
         stopOnScreenLock = defaults.bool(forKey: Key.stopOnScreenLock)
+        showsCountdown = defaults.bool(forKey: Key.showsCountdown)
     }
 
     var safetyRules: SafetyRules {
