@@ -8,6 +8,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     private var settingsWindow: SettingsWindowController?
     private var hotKey: GlobalHotKey?
     private var safetyGuard: SafetyGuard?
+    private var notifier: Notifier?
 
     func applicationDidFinishLaunching(_ notification: Notification) {
         // unit tests use the app as a host, keep the menu bar clean there
@@ -21,6 +22,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             keepDisplayOn: settings.keepDisplayOn
         )
         let settingsWindow = SettingsWindowController(settings: settings)
+        let notifier = Notifier()
+        self.notifier = notifier
+        manager.onAutoStop = { reason in
+            if settings.notifyOnAutoStop { notifier.post(for: reason) }
+        }
         safetyGuard = SafetyGuard(manager: manager, settings: settings, monitor: PowerMonitor())
 
         awakeManager = manager
