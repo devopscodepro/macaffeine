@@ -27,6 +27,8 @@ final class AwakeManager {
             if holds != oldValue { onChange?(state) }
         }
     }
+    // true when the running session was started for a specific end time, not from the selected duration
+    private(set) var isCustomSession = false
     // changing it directly only affects the next activation, use select() to restart the countdown
     var duration: AwakeDuration
     var keepDisplayOn: Bool {
@@ -93,18 +95,18 @@ final class AwakeManager {
 
     func activate() {
         guard !isSessionActive, acquireIfNeeded() else { return }
-        startSession(until: duration.expiration(from: now()))
+        startSession(until: duration.expiration(from: now()), custom: false)
     }
 
     func activate(until date: Date?) {
         guard acquireIfNeeded() else { return }
-        startSession(until: date)
+        startSession(until: date, custom: true)
     }
 
     func select(_ duration: AwakeDuration) {
         self.duration = duration
         if isSessionActive {
-            startSession(until: duration.expiration(from: now()))
+            startSession(until: duration.expiration(from: now()), custom: false)
         } else {
             activate()
         }
@@ -170,7 +172,8 @@ final class AwakeManager {
         return true
     }
 
-    private func startSession(until: Date?) {
+    private func startSession(until: Date?, custom: Bool) {
+        isCustomSession = custom
         if let until {
             scheduler.schedule(at: until) { [weak self] in self?.expire() }
         } else {

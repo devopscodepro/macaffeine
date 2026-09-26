@@ -385,6 +385,17 @@ struct AwakeManagerTests {
         #expect(manager.state == .active(until: until))
         #expect(scheduler.deadline == until)
         #expect(manager.duration == .minutes(30))
+        #expect(manager.isCustomSession)
+    }
+
+    @Test func selectingPresetEndsCustomSession() {
+        let manager = makeManager()
+        manager.activate(until: clock.now.addingTimeInterval(3600))
+
+        manager.select(.minutes(15))
+
+        #expect(!manager.isCustomSession)
+        #expect(manager.state == .active(until: clock.now.addingTimeInterval(900)))
     }
 }
 

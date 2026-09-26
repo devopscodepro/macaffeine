@@ -15,6 +15,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let durationMenu = NSMenu()
     private let displayItem = NSMenuItem()
     private var durationItems: [(AwakeDuration, NSMenuItem)] = []
+    private let untilItem = NSMenuItem()
     private var refreshTimer: Timer?
     private var subscriptions: Set<AnyCancellable> = []
 
@@ -89,6 +90,11 @@ final class MenuBarController: NSObject, NSMenuDelegate {
                 durationMenu.addItem(.separator())
             }
         }
+
+        durationMenu.addItem(.separator())
+        untilItem.target = self
+        untilItem.action = #selector(chooseEndTime)
+        durationMenu.addItem(untilItem)
     }
 
     private func update() {
@@ -102,8 +108,15 @@ final class MenuBarController: NSObject, NSMenuDelegate {
 
         displayItem.state = settings.keepDisplayOn ? .on : .off
 
+        let isCustom = manager.isSessionActive && manager.isCustomSession
         for (duration, item) in durationItems {
-            item.state = duration == manager.duration ? .on : .off
+            item.state = !isCustom && duration == manager.duration ? .on : .off
+        }
+        untilItem.state = isCustom ? .on : .off
+        if isCustom, case .active(let until?) = manager.state {
+            untilItem.title = String(localized: "Until \(MenuStatus.timeFormatter.string(from: until))…")
+        } else {
+            untilItem.title = String(localized: "Until…")
         }
 
         statusItem.button?.image = MenuBarIcon.image(isActive: isActive)
@@ -121,6 +134,20 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let duration = AwakeDuration(storedMinutes: minutes)
         settings.duration = duration
         manager.select(duration)
+    }
+
+    @objc private func chooseEndTime() {
+        guard let date = EndTimePicker.run(initial: suggestedEndTime()) else { return }
+        manager.activate(until: date)
+    }
+
+    // an hour from now, rounded up to a quarter
+    private func suggestedEndTime() -> Date {
+        let calendar = Calendar.current
+        let inAnHour = Date().addingTimeInterval(3600)
+        let minute = calendar.component(.minute, from: inAnHour)
+        let rounded = calendar.date(byAdding: .minute, value: (15 - minute % 15) % 15, to: inAnHour) ?? inAnHour
+        return calendar.date(bySetting: .second, value: 0, of: rounded) ?? rounded
     }
 
     @objc private func toggleDisplay() {
