@@ -7,6 +7,7 @@ struct GeneralSettingsView: View {
     @State private var launchAtLogin = LaunchAtLogin.isEnabled
     @State private var needsApproval = LaunchAtLogin.needsApproval
     @State private var notificationsBlocked = false
+    @State private var copied = false
 
     var body: some View {
         Form {
@@ -64,6 +65,30 @@ struct GeneralSettingsView: View {
             }
 
             Section {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Keep your Mac awake while a command runs, for example `macaffeine run -- make`. To install it, run this in Terminal:")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                    HStack(alignment: .top) {
+                        Text(Self.installCommand)
+                            .font(.system(.caption, design: .monospaced))
+                            .textSelection(.enabled)
+                            .fixedSize(horizontal: false, vertical: true)
+                        Spacer()
+                        Button(copied ? "Copied" : "Copy") {
+                            NSPasteboard.general.clearContents()
+                            NSPasteboard.general.setString(Self.installCommand, forType: .string)
+                            copied = true
+                        }
+                        .controlSize(.small)
+                    }
+                }
+            } header: {
+                Text("Command Line Tool")
+            }
+
+            Section {
                 HStack(spacing: 10) {
                     Image(nsImage: NSApplication.shared.applicationIconImage)
                         .resizable()
@@ -88,6 +113,11 @@ struct GeneralSettingsView: View {
         .onReceive(NotificationCenter.default.publisher(for: NSWindow.didBecomeKeyNotification)) { _ in
             refresh()
         }
+    }
+
+    private static var installCommand: String {
+        let path = Bundle.main.url(forResource: "macaffeine", withExtension: nil)?.path ?? "/Applications/Macaffeine.app/Contents/Resources/macaffeine"
+        return "sudo mkdir -p /usr/local/bin && sudo ln -sf '\(path)' /usr/local/bin/macaffeine"
     }
 
     private static var version: String {
