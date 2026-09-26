@@ -1,0 +1,143 @@
+#!/bin/sh
+# Command line companion for Macaffeine.app. Talks to the app through macaffeine:// URLs.
+
+export LC_ALL=C
+
+usage() {
+    cat <<'EOF'
+usage: macaffeine <command> [options]
+
+  on [DURATION]              keep awake (selected duration by default)
+  on --until HH:MM           keep awake until a time of day
+  off                        let the Mac sleep again (also drops holds)
+  toggle                     switch keep awake on or off
+  run [--label L] [--for DURATION] [--] COMMAND...
+                             keep awake while COMMAND runs
+  hold ID [--label L] [--pid PID] [--for DURATION]
+                             keep awake until "release ID" or PID exits
+  release ID                 drop a hold
+
+DURATION: 90, 45m, 2h, 1h30m or indefinite
+EOF
+}
+
+die() {
+    echo "macaffeine: $*" >&2
+    exit 2
+}
+
+send() {
+    /usr/bin/open -g "macaffeine://$1" || die "can't reach Macaffeine.app, is it installed?"
+}
+
+encode() {
+    rest=$1
+    out=
+    while [ -n "$rest" ]; do
+        c=${rest%"${rest#?}"}
+        rest=${rest#?}
+        case $c in
+            [A-Za-z0-9._~-]) out=$out$c ;;
+            *) out=$out$(printf '%%%02X' "'$c") ;;
+        esac
+    done
+    printf '%s' "$out"
+}
+
+minutes() {
+    case $1 in
+        *h*m) h=${1%%h*}; m=${1#*h}; m=${m%m} ;;
+        *h) h=${1%h}; m=0 ;;
+        *m) h=0; m=${1%m} ;;
+        *) h=0; m=$1 ;;
+    esac
+    case $h$m in
+        '' | *[!0-9]*) die "bad duration: $1" ;;
+    esac
+    total=$((h * 60 + m))
+    [ "$total" -gt 0 ] || die "bad duration: $1"
+    echo "$total"
+}
+
+# builds "&minutes=N" or "&duration=indefinite"
+duration_query() {
+    if [ "$1" = indefinite ]; then
+        printf '&duration=indefinite'
+    else
+        total=$(minutes "$1") || exit 2
+        printf '&minutes=%s' "$total"
+    fi
+}
+
+cmd=$1
+[ -n "$cmd" ] || { usage; exit 2; }
+shift
+
+case $cmd in
+    on)
+        if [ "$1" = --until ]; then
+            [ -n "$2" ] || die "--until needs a time like 17:30"
+            send "activate?until=$(encode "$2")"
+        elif [ -n "$1" ]; then
+            query=$(duration_query "$1") || exit 2
+            send "activate?${query#&}"
+        else
+            send activate
+        fi
+        ;;
+    off)
+        send deactivate
+        ;;
+    toggle)
+        send toggle
+        ;;
+    run)
+        label=
+        extra=
+        while [ $# -gt 0 ]; do
+            case $1 in
+                --label) label=$2; shift 2 ;;
+                --for) extra=$(duration_query "$2") || exit 2; shift 2 ;;
+                --) shift; break ;;
+                -*) die "unknown option: $1" ;;
+                *) break ;;
+            esac
+        done
+        [ $# -gt 0 ] || die "run needs a command"
+        [ -n "$label" ] || label=$(basename "$1")
+
+        id="run-$$"
+        send "hold?id=$id&pid=$$&label=$(encode "$label")$extra"
+        trap 'send "release?id=$id"; exit 130' INT TERM
+        "$@"
+        status=$?
+        send "release?id=$id"
+        exit $status
+        ;;
+    hold)
+        id=$1
+        [ -n "$id" ] || die "hold needs an ID"
+        shift
+        query="hold?id=$(encode "$id")"
+        while [ $# -gt 0 ]; do
+            case $1 in
+                --label) query="$query&label=$(encode "$2")"; shift 2 ;;
+                --pid) query="$query&pid=$2"; shift 2 ;;
+                --for) extra=$(duration_query "$2") || exit 2; query="$query$extra"; shift 2 ;;
+                *) die "unknown option: $1" ;;
+            esac
+        done
+        send "$query"
+        ;;
+    release)
+        [ -n "$1" ] || die "release needs an ID"
+        send "release?id=$(encode "$1")"
+        ;;
+    -h | --help | help)
+        usage
+        ;;
+    *)
+        usage >&2
+        exit 2
+        ;;
+esac
