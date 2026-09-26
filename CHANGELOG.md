@@ -10,9 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Menu bar app that keeps the Mac awake using a native power assertion. The display can still sleep.
-- Durations: indefinite, 30 minutes, 1, 2, 4 and 8 hours, with remaining time shown in the menu.
+- Active for Duration submenu: indefinite or one of the presets (5, 10, 15, 30 minutes, 1–5 hours by default), with remaining time shown in the menu.
+- Settings window: Launch at Login and your own duration presets (add, remove, restore defaults).
 - Keep awake turns off by itself when the duration ends, including after the Mac wakes from sleep.
 - Global hotkey ⌃⌥⌘K to toggle.
-- Launch at Login.
 - Selected duration is remembered between launches.
+- App icon.
 - MIT license.
