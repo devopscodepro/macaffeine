@@ -10,7 +10,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     private let menu = NSMenu()
     private let toggleItem = NSMenuItem()
-    private let statusLineItem = NSMenuItem()
+    private let headerView = StatusHeaderView()
     private let durationMenu = NSMenu()
     private var durationItems: [(AwakeDuration, NSMenuItem)] = []
     private var refreshTimer: Timer?
@@ -35,17 +35,17 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private func buildMenu() {
         menu.autoenablesItems = false
 
+        let headerItem = NSMenuItem()
+        headerItem.view = headerView
+        menu.addItem(headerItem)
+        menu.addItem(.separator())
+
         toggleItem.title = String(localized: "Keep Awake")
         toggleItem.target = self
         toggleItem.action = #selector(toggle)
         toggleItem.keyEquivalent = "k"
         toggleItem.keyEquivalentModifierMask = [.control, .option, .command]
         menu.addItem(toggleItem)
-
-        statusLineItem.isEnabled = false
-        menu.addItem(statusLineItem)
-
-        menu.addItem(.separator())
 
         let durationItem = NSMenuItem(title: String(localized: "Active for Duration"), action: nil, keyEquivalent: "")
         durationMenu.autoenablesItems = false
@@ -84,7 +84,8 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let isActive = manager.isActive
 
         toggleItem.state = isActive ? .on : .off
-        statusLineItem.title = statusText()
+        let status = MenuStatus(state: manager.state, now: Date())
+        headerView.configure(isActive: isActive, title: status.title, detail: status.detail)
 
         for (duration, item) in durationItems {
             item.state = duration == manager.duration ? .on : .off
@@ -97,16 +98,6 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let image = NSImage(systemSymbolName: symbol, accessibilityDescription: label)
         image?.isTemplate = true
         statusItem.button?.image = image
-    }
-
-    private func statusText() -> String {
-        guard case .active(let until) = manager.state else {
-            return String(localized: "Off")
-        }
-        guard until != nil, let remaining = manager.remaining else {
-            return String(localized: "On — Indefinite")
-        }
-        return String(localized: "On — \(RemainingTime.format(remaining)) remaining")
     }
 
     @objc private func toggle() {
