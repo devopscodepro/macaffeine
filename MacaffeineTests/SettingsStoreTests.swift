@@ -103,4 +103,12 @@ struct SettingsStoreTests {
 
         #expect(SettingsStore(defaults: defaults).batteryThreshold == 20)
     }
+
+    @Test func screenLockStopIsOffByDefault() {
+        #expect(!SettingsStore(defaults: defaults).stopOnScreenLock)
+
+        SettingsStore(defaults: defaults).stopOnScreenLock = true
+
+        #expect(SettingsStore(defaults: defaults).stopOnScreenLock)
+    }
 }

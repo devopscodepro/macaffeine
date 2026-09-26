@@ -25,6 +25,13 @@ struct SafetySettingsView: View {
                     Text("Stop when your Mac overheats")
                     Text("When macOS reports a critical temperature, for example in a closed bag.")
                 }
+            }
+
+            Section {
+                Toggle(isOn: $settings.stopOnScreenLock) {
+                    Text("Stop when you lock your screen")
+                    Text("Also when it locks by itself after the display turns off. Command line and Shortcuts requests keep running.")
+                }
             } footer: {
                 Text("Closing the lid still puts your Mac to sleep unless it's connected to power and an external display. That's how macOS works, Macaffeine doesn't change it.")
                     .foregroundStyle(.secondary)

@@ -59,6 +59,10 @@ struct MenuStatus: Equatable {
             tone = .warning
             title = String(localized: "Stopped, your Mac is too hot")
             detail = String(localized: "Let it cool down and try again.")
+        case (.inactive, .screenLocked?):
+            tone = .idle
+            title = String(localized: "Your Mac can sleep")
+            detail = String(localized: "Stopped when the screen was locked")
         case (.inactive, .assertionFailed?):
             tone = .error
             title = String(localized: "Couldn't keep your Mac awake")

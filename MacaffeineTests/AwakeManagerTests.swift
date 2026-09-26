@@ -397,6 +397,41 @@ struct AwakeManagerTests {
         #expect(!manager.isCustomSession)
         #expect(manager.state == .active(until: clock.now.addingTimeInterval(900)))
     }
+
+    @Test func stopSessionKeepsHolds() {
+        let manager = makeManager()
+        var autoStops: [StopReason] = []
+        manager.onAutoStop = { autoStops.append($0) }
+        manager.activate()
+        manager.hold(Hold(id: "build"))
+
+        manager.stopSession(because: .screenLocked)
+
+        #expect(!manager.isSessionActive)
+        #expect(manager.holds.count == 1)
+        #expect(assertion.isHeld)
+        #expect(autoStops == [.screenLocked])
+    }
+
+    @Test func stopSessionReleasesWhenNothingElse() {
+        let manager = makeManager()
+        manager.activate()
+
+        manager.stopSession(because: .screenLocked)
+
+        #expect(!assertion.isHeld)
+        #expect(manager.stopReason == .screenLocked)
+    }
+
+    @Test func stopSessionWithoutSessionDoesNothing() {
+        let manager = makeManager()
+        manager.hold(Hold(id: "build"))
+
+        manager.stopSession(because: .screenLocked)
+
+        #expect(manager.stopReason == nil)
+        #expect(manager.holds.count == 1)
+    }
 }
 
 @MainActor

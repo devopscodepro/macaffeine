@@ -154,6 +154,17 @@ final class AwakeManager {
         onAutoStop?(reason)
     }
 
+    // ends only the manual session, holds belong to running processes and stay
+    func stopSession(because reason: StopReason) {
+        guard isSessionActive else { return }
+
+        scheduler.cancel()
+        state = .inactive
+        releaseAssertionIfIdle()
+        stopReason = reason
+        onAutoStop?(reason)
+    }
+
     private func acquireIfNeeded() -> Bool {
         if let reason = safetyCheck() {
             stopReason = reason

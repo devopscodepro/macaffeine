@@ -11,6 +11,7 @@ final class SettingsStore: ObservableObject {
         static let stopInLowPowerMode = "stopInLowPowerMode"
         static let stopWhenOverheating = "stopWhenOverheating"
         static let notifyOnAutoStop = "notifyOnAutoStop"
+        static let stopOnScreenLock = "stopOnScreenLock"
     }
 
     static let batteryThresholds = [10, 15, 20, 25, 30, 40, 50]
@@ -49,6 +50,10 @@ final class SettingsStore: ObservableObject {
         didSet { defaults.set(notifyOnAutoStop, forKey: Key.notifyOnAutoStop) }
     }
 
+    @Published var stopOnScreenLock: Bool {
+        didSet { defaults.set(stopOnScreenLock, forKey: Key.stopOnScreenLock) }
+    }
+
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
 
@@ -63,6 +68,7 @@ final class SettingsStore: ObservableObject {
         stopInLowPowerMode = defaults.object(forKey: Key.stopInLowPowerMode) as? Bool ?? true
         stopWhenOverheating = defaults.object(forKey: Key.stopWhenOverheating) as? Bool ?? true
         notifyOnAutoStop = defaults.bool(forKey: Key.notifyOnAutoStop)
+        stopOnScreenLock = defaults.bool(forKey: Key.stopOnScreenLock)
     }
 
     var safetyRules: SafetyRules {

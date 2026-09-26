@@ -7,6 +7,7 @@ final class SafetyGuard {
     private let settings: SettingsStore
     private let monitor: PowerMonitor
     private var subscription: AnyCancellable?
+    private var lockObserver: NSObjectProtocol?
 
     init(manager: AwakeManager, settings: SettingsStore, monitor: PowerMonitor) {
         self.manager = manager
@@ -19,6 +20,20 @@ final class SafetyGuard {
         subscription = settings.objectWillChange
             .receive(on: RunLoop.main)
             .sink { [weak self] in self?.evaluate() }
+
+        lockObserver = DistributedNotificationCenter.default().addObserver(
+            forName: Notification.Name("com.apple.screenIsLocked"),
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            MainActor.assumeIsolated { self?.screenLocked() }
+        }
+    }
+
+    private func screenLocked() {
+        guard settings.stopOnScreenLock, manager.isSessionActive else { return }
+        Log.awake.info("Screen locked, ending session")
+        manager.stopSession(because: .screenLocked)
     }
 
     private func currentReason() -> StopReason? {

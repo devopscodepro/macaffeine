@@ -51,6 +51,8 @@ extension StopReason {
             (String(localized: "Keep Awake stopped"), String(localized: "Low Power Mode is on, your Mac can sleep again."))
         case .overheating:
             (String(localized: "Keep Awake stopped"), String(localized: "Your Mac is too hot, it can sleep again."))
+        case .screenLocked:
+            (String(localized: "Keep Awake stopped"), String(localized: "You locked the screen, your Mac can sleep again."))
         case .assertionFailed:
             nil
         }

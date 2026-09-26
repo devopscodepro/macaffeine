@@ -5,5 +5,6 @@ enum StopReason: Equatable {
     case lowBattery(threshold: Int)
     case lowPowerMode
     case overheating
+    case screenLocked
     case assertionFailed
 }
