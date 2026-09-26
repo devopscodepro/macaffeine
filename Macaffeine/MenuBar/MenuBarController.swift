@@ -91,13 +91,10 @@ final class MenuBarController: NSObject, NSMenuDelegate {
             item.state = duration == manager.duration ? .on : .off
         }
 
-        let symbol = isActive ? "cup.and.saucer.fill" : "cup.and.saucer"
-        let label = isActive
+        statusItem.button?.image = MenuBarIcon.image(isActive: isActive)
+        statusItem.button?.setAccessibilityLabel(isActive
             ? String(localized: "Macaffeine, keeping your Mac awake")
-            : String(localized: "Macaffeine, off")
-        let image = NSImage(systemSymbolName: symbol, accessibilityDescription: label)
-        image?.isTemplate = true
-        statusItem.button?.image = image
+            : String(localized: "Macaffeine, off"))
     }
 
     @objc private func toggle() {
