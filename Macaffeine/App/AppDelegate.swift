@@ -18,6 +18,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         let manager = AwakeManager(
             assertion: IOPMPowerAssertionManager(),
             scheduler: ExpirationTimer(),
+            makeHoldScheduler: { ExpirationTimer() },
+            processWatcher: ProcessWatcher(),
             duration: settings.duration,
             keepDisplayOn: settings.keepDisplayOn
         )

@@ -7,12 +7,17 @@ struct AwakeManagerTests {
     let assertion = MockPowerAssertionManager()
     let scheduler = MockExpirationScheduler()
     let clock = TestClock()
+    let processWatcher = MockProcessWatcher()
+    let holdSchedulers = HoldSchedulers()
 
     func makeManager(duration: AwakeDuration = .indefinite, keepDisplayOn: Bool = false) -> AwakeManager {
         let clock = clock
+        let holdSchedulers = holdSchedulers
         return AwakeManager(
             assertion: assertion,
             scheduler: scheduler,
+            makeHoldScheduler: { holdSchedulers.make() },
+            processWatcher: processWatcher,
             duration: duration,
             keepDisplayOn: keepDisplayOn,
             now: { clock.now }
@@ -246,5 +251,150 @@ struct AwakeManagerTests {
         manager.stop(because: .lowPowerMode)
         manager.deactivate()
         #expect(manager.stopReason == nil)
+    }
+
+    @Test func holdKeepsMacAwake() {
+        let manager = makeManager()
+
+        manager.hold(Hold(id: "build", label: "make"))
+
+        #expect(manager.isActive)
+        #expect(!manager.isSessionActive)
+        #expect(assertion.isHeld)
+        #expect(manager.holds.map(\.id) == ["build"])
+    }
+
+    @Test func releasingLastHoldReleasesAssertion() {
+        let manager = makeManager()
+        manager.hold(Hold(id: "a"))
+        manager.hold(Hold(id: "b"))
+
+        manager.release(holdID: "a")
+        #expect(assertion.isHeld)
+
+        manager.release(holdID: "b")
+        #expect(!assertion.isHeld)
+        #expect(!manager.isActive)
+    }
+
+    @Test func holdDoesNotEndManualSession() {
+        let manager = makeManager()
+        manager.activate()
+
+        manager.hold(Hold(id: "run"))
+        manager.release(holdID: "run")
+
+        #expect(manager.isSessionActive)
+        #expect(assertion.isHeld)
+        #expect(assertion.acquireCount == 1)
+    }
+
+    @Test func sessionExpiryKeepsHolds() {
+        let manager = makeManager(duration: .minutes(30))
+        var autoStops: [StopReason] = []
+        manager.onAutoStop = { autoStops.append($0) }
+        manager.activate()
+        manager.hold(Hold(id: "run"))
+
+        scheduler.fire()
+
+        #expect(!manager.isSessionActive)
+        #expect(manager.isActive)
+        #expect(assertion.isHeld)
+        #expect(autoStops.isEmpty)
+    }
+
+    @Test func holdIsReleasedWhenProcessExits() {
+        let manager = makeManager()
+        manager.hold(Hold(id: "run", pid: 4242))
+
+        processWatcher.exit(4242)
+
+        #expect(manager.holds.isEmpty)
+        #expect(!assertion.isHeld)
+    }
+
+    @Test func holdExpires() {
+        let manager = makeManager()
+        manager.hold(Hold(id: "claude", until: clock.now.addingTimeInterval(7200)))
+
+        #expect(holdSchedulers.all.first?.deadline == clock.now.addingTimeInterval(7200))
+        holdSchedulers.all.first?.fire()
+
+        #expect(manager.holds.isEmpty)
+        #expect(!assertion.isHeld)
+    }
+
+    @Test func replacingHoldCancelsOldWatcher() {
+        let manager = makeManager()
+        manager.hold(Hold(id: "run", pid: 1))
+
+        manager.hold(Hold(id: "run", pid: 2))
+
+        #expect(processWatcher.cancelled == [1])
+        #expect(manager.holds.count == 1)
+    }
+
+    @Test func deactivateDropsHolds() {
+        let manager = makeManager()
+        manager.activate()
+        manager.hold(Hold(id: "run", pid: 7))
+
+        manager.deactivate()
+
+        #expect(manager.holds.isEmpty)
+        #expect(!assertion.isHeld)
+        #expect(processWatcher.cancelled == [7])
+    }
+
+    @Test func toggleTurnsOffHolds() {
+        let manager = makeManager()
+        manager.hold(Hold(id: "run"))
+
+        manager.toggle()
+
+        #expect(!manager.isActive)
+    }
+
+    @Test func safetyStopDropsHolds() {
+        let manager = makeManager()
+        manager.hold(Hold(id: "run"))
+
+        manager.stop(because: .overheating)
+
+        #expect(manager.holds.isEmpty)
+        #expect(manager.stopReason == .overheating)
+    }
+
+    @Test func safetyBlocksHold() {
+        let manager = makeManager()
+        manager.safetyCheck = { .lowPowerMode }
+
+        manager.hold(Hold(id: "run"))
+
+        #expect(manager.holds.isEmpty)
+        #expect(manager.stopReason == .lowPowerMode)
+    }
+
+    @Test func activateUntilDate() {
+        let manager = makeManager(duration: .minutes(30))
+        let until = clock.now.addingTimeInterval(5 * 3600)
+
+        manager.activate(until: until)
+
+        #expect(manager.state == .active(until: until))
+        #expect(scheduler.deadline == until)
+        #expect(manager.duration == .minutes(30))
+    }
+}
+
+@MainActor
+final class HoldSchedulers {
+    private(set) var all: [MockExpirationScheduler] = []
+
+    func make() -> MockExpirationScheduler {
+        let scheduler = MockExpirationScheduler()
+        all.append(scheduler)
+        return scheduler
     }
 }

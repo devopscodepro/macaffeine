@@ -1,3 +1,4 @@
+import Combine
 import Foundation
 @testable import Macaffeine
 
@@ -51,5 +52,25 @@ final class TestClock {
 
     func advance(by interval: TimeInterval) {
         now = now.addingTimeInterval(interval)
+    }
+}
+
+@MainActor
+final class MockProcessWatcher: ProcessWatching {
+    private var handlers: [pid_t: @MainActor () -> Void] = [:]
+    private(set) var cancelled: [pid_t] = []
+
+    func watch(_ pid: pid_t, onExit: @escaping @MainActor () -> Void) -> AnyCancellable {
+        handlers[pid] = onExit
+        return AnyCancellable { [weak self] in
+            MainActor.assumeIsolated {
+                self?.cancelled.append(pid)
+                self?.handlers[pid] = nil
+            }
+        }
+    }
+
+    func exit(_ pid: pid_t) {
+        handlers.removeValue(forKey: pid)?()
     }
 }

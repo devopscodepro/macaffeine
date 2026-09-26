@@ -12,7 +12,26 @@ struct MenuStatus: Equatable {
     let title: String
     let detail: String
 
-    init(state: AwakeState, stopReason: StopReason?, now: Date, timeFormatter: DateFormatter = MenuStatus.timeFormatter) {
+    init(
+        state: AwakeState,
+        holds: [Hold] = [],
+        stopReason: StopReason?,
+        now: Date,
+        timeFormatter: DateFormatter = MenuStatus.timeFormatter
+    ) {
+        if state == .inactive, !holds.isEmpty {
+            tone = .active
+            title = String(localized: "Keeping your Mac awake")
+            if holds.count == 1, let label = holds[0].label {
+                detail = String(localized: "While \(label) is running")
+            } else if holds.count == 1 {
+                detail = String(localized: "Requested by another app")
+            } else {
+                detail = String(localized: "For \(holds.count) tasks")
+            }
+            return
+        }
+
         switch (state, stopReason) {
         case (.active(nil), _):
             tone = .active

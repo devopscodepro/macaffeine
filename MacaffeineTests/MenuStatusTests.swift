@@ -58,4 +58,23 @@ struct MenuStatusTests {
     @Test func assertionFailureIsError() {
         #expect(status(.inactive, .assertionFailed).tone == .error)
     }
+
+    @Test func singleHoldShowsLabel() {
+        let status = MenuStatus(state: .inactive, holds: [Hold(id: "1", label: "make")], stopReason: nil, now: now)
+
+        #expect(status.tone == .active)
+        #expect(status.detail == "While make is running")
+    }
+
+    @Test func severalHolds() {
+        let status = MenuStatus(state: .inactive, holds: [Hold(id: "1"), Hold(id: "2")], stopReason: nil, now: now)
+
+        #expect(status.detail == "For 2 tasks")
+    }
+
+    @Test func sessionTextWinsOverHolds() {
+        let status = MenuStatus(state: .active(until: nil), holds: [Hold(id: "1", label: "make")], stopReason: nil, now: now)
+
+        #expect(status.detail == "Until you turn it off")
+    }
 }

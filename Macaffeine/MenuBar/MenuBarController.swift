@@ -95,7 +95,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         let isActive = manager.isActive
 
         toggleItem.state = isActive ? .on : .off
-        headerView.configure(with: MenuStatus(state: manager.state, stopReason: manager.stopReason, now: Date()))
+        headerView.configure(with: MenuStatus(state: manager.state, holds: manager.holds, stopReason: manager.stopReason, now: Date()))
 
         displayItem.state = settings.keepDisplayOn ? .on : .off
 
