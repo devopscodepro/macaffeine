@@ -91,6 +91,8 @@ struct AwakeManagerTests {
 
     @Test func expirationTurnsItOff() {
         let manager = makeManager(duration: .minutes(30))
+        var autoStops: [StopReason] = []
+        manager.onAutoStop = { autoStops.append($0) }
         manager.activate()
 
         clock.advance(by: 1800)
@@ -98,6 +100,8 @@ struct AwakeManagerTests {
 
         #expect(manager.state == .inactive)
         #expect(!assertion.isHeld)
+        #expect(manager.stopReason == .expired(at: clock.now))
+        #expect(autoStops == [.expired(at: clock.now)])
     }
 
     @Test func remainingCountsDown() throws {
@@ -144,13 +148,14 @@ struct AwakeManagerTests {
         #expect(assertion.isHeld)
     }
 
-    @Test func failedAcquireStaysInactive() {
+    @Test func failedAcquireStaysInactiveWithReason() {
         assertion.failOnAcquire = true
         let manager = makeManager(duration: .minutes(60))
 
         manager.activate()
 
         #expect(manager.state == .inactive)
+        #expect(manager.stopReason == .assertionFailed)
         #expect(scheduler.deadline == nil)
     }
 
@@ -191,5 +196,55 @@ struct AwakeManagerTests {
         manager.keepDisplayOn = true
 
         #expect(assertion.acquireCount == 0)
+    }
+
+    @Test func safetyCheckBlocksActivation() {
+        let manager = makeManager()
+        manager.safetyCheck = { .lowBattery(threshold: 20) }
+
+        manager.activate()
+
+        #expect(!manager.isActive)
+        #expect(assertion.acquireCount == 0)
+        #expect(manager.stopReason == .lowBattery(threshold: 20))
+    }
+
+    @Test func stopWithReasonReleasesAndReports() {
+        let manager = makeManager(duration: .minutes(60))
+        var autoStops: [StopReason] = []
+        manager.onAutoStop = { autoStops.append($0) }
+        manager.activate()
+
+        manager.stop(because: .overheating)
+
+        #expect(!manager.isActive)
+        #expect(!assertion.isHeld)
+        #expect(scheduler.deadline == nil)
+        #expect(manager.stopReason == .overheating)
+        #expect(autoStops == [.overheating])
+    }
+
+    @Test func stopWhenInactiveIsIgnored() {
+        let manager = makeManager()
+        var autoStops: [StopReason] = []
+        manager.onAutoStop = { autoStops.append($0) }
+
+        manager.stop(because: .lowPowerMode)
+
+        #expect(manager.stopReason == nil)
+        #expect(autoStops.isEmpty)
+    }
+
+    @Test func manualActionsClearReason() {
+        let manager = makeManager()
+        manager.activate()
+        manager.stop(because: .lowPowerMode)
+
+        manager.activate()
+        #expect(manager.stopReason == nil)
+
+        manager.stop(because: .lowPowerMode)
+        manager.deactivate()
+        #expect(manager.stopReason == nil)
     }
 }

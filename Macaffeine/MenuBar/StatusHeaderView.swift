@@ -44,11 +44,11 @@ final class StatusHeaderView: NSView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func configure(isActive: Bool, title: String, detail: String) {
-        dot.isActive = isActive
-        titleLabel.stringValue = title
-        detailLabel.stringValue = detail
-        setAccessibilityLabel("\(title). \(detail)")
+    func configure(with status: MenuStatus) {
+        dot.tone = status.tone
+        titleLabel.stringValue = status.title
+        detailLabel.stringValue = status.detail
+        setAccessibilityLabel("\(status.title). \(status.detail)")
 
         let width = max(frame.width, fittingSize.width)
         setFrameSize(NSSize(width: width, height: fittingSize.height))
@@ -56,14 +56,19 @@ final class StatusHeaderView: NSView {
 }
 
 private final class StatusDotView: NSView {
-    var isActive = false {
+    var tone = MenuStatus.Tone.idle {
         didSet { needsDisplay = true }
     }
 
     override func draw(_ dirtyRect: NSRect) {
-        let color: NSColor = isActive ? .systemGreen : .tertiaryLabelColor
+        let color: NSColor = switch tone {
+        case .active: .systemGreen
+        case .idle: .tertiaryLabelColor
+        case .warning: .systemOrange
+        case .error: .systemRed
+        }
 
-        if isActive {
+        if tone != .idle {
             color.withAlphaComponent(0.25).setFill()
             NSBezierPath(ovalIn: bounds).fill()
         }

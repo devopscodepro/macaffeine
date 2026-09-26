@@ -13,24 +13,49 @@ struct MenuStatusTests {
         return formatter
     }
 
-    @Test func inactive() {
-        let status = MenuStatus(state: .inactive, now: now, timeFormatter: formatter)
+    func status(_ state: AwakeState, _ reason: StopReason? = nil) -> MenuStatus {
+        MenuStatus(state: state, stopReason: reason, now: now, timeFormatter: formatter)
+    }
 
+    @Test func inactive() {
+        let status = status(.inactive)
+
+        #expect(status.tone == .idle)
         #expect(status.title == "Your Mac can sleep")
         #expect(status.detail == "Choose a duration or press ⌃⌥⌘K")
     }
 
     @Test func indefinite() {
-        let status = MenuStatus(state: .active(until: nil), now: now, timeFormatter: formatter)
+        let status = status(.active(until: nil))
 
+        #expect(status.tone == .active)
         #expect(status.title == "Keeping your Mac awake")
         #expect(status.detail == "Until you turn it off")
     }
 
     @Test func timed() {
         let until = now.addingTimeInterval(6120)
-        let status = MenuStatus(state: .active(until: until), now: now, timeFormatter: formatter)
 
-        #expect(status.detail == "1h 42m remaining · until \(formatter.string(from: until))")
+        #expect(status(.active(until: until)).detail == "1h 42m remaining · until \(formatter.string(from: until))")
+    }
+
+    @Test func expired() {
+        let status = status(.inactive, .expired(at: now))
+
+        #expect(status.tone == .idle)
+        #expect(status.detail == "Timer finished at \(formatter.string(from: now))")
+    }
+
+    @Test(arguments: [StopReason.lowBattery(threshold: 20), .lowPowerMode, .overheating])
+    func safetyStopsAreWarnings(reason: StopReason) {
+        #expect(status(.inactive, reason).tone == .warning)
+    }
+
+    @Test func lowBatteryMentionsThreshold() {
+        #expect(status(.inactive, .lowBattery(threshold: 20)).detail.contains("20%"))
+    }
+
+    @Test func assertionFailureIsError() {
+        #expect(status(.inactive, .assertionFailed).tone == .error)
     }
 }

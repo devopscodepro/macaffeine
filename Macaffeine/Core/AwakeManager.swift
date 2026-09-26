@@ -24,7 +24,14 @@ final class AwakeManager {
             }
         }
     }
+    private(set) var stopReason: StopReason? {
+        didSet {
+            if stopReason != oldValue { onChange?(state) }
+        }
+    }
     var onChange: ((AwakeState) -> Void)?
+    var onAutoStop: ((StopReason) -> Void)?
+    var safetyCheck: () -> StopReason? = { nil }
 
     private let assertion: PowerAssertionManaging
     private let scheduler: ExpirationScheduling
@@ -60,12 +67,18 @@ final class AwakeManager {
     func activate() {
         guard !isActive else { return }
 
+        if let reason = safetyCheck() {
+            stopReason = reason
+            return
+        }
         do {
             try assertion.acquire(keepDisplayOn: keepDisplayOn)
         } catch {
             Log.awake.error("Could not keep the Mac awake: \(String(describing: error), privacy: .public)")
+            stopReason = .assertionFailed
             return
         }
+        stopReason = nil
         startCountdown()
     }
 
@@ -79,6 +92,19 @@ final class AwakeManager {
     }
 
     func deactivate() {
+        release()
+        stopReason = nil
+    }
+
+    func stop(because reason: StopReason) {
+        guard isActive else { return }
+
+        release()
+        stopReason = reason
+        onAutoStop?(reason)
+    }
+
+    private func release() {
         guard isActive else { return }
 
         scheduler.cancel()
@@ -99,6 +125,6 @@ final class AwakeManager {
 
     private func expire() {
         Log.awake.info("Duration expired")
-        deactivate()
+        stop(because: .expired(at: now()))
     }
 }
