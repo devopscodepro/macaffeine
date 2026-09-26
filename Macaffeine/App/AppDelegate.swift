@@ -21,9 +21,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
             duration: settings.duration,
             keepDisplayOn: settings.keepDisplayOn
         )
-        let settingsWindow = SettingsWindowController(settings: settings)
         let notifier = Notifier()
         self.notifier = notifier
+        let settingsWindow = SettingsWindowController(settings: settings, notifier: notifier)
         manager.onAutoStop = { reason in
             if settings.notifyOnAutoStop { notifier.post(for: reason) }
         }

@@ -1,10 +1,8 @@
 import SwiftUI
 
-struct SettingsView: View {
+struct DurationsSettingsView: View {
     @ObservedObject var settings: SettingsStore
 
-    @State private var launchAtLogin = LaunchAtLogin.isEnabled
-    @State private var needsApproval = LaunchAtLogin.needsApproval
     @State private var newHours = 0
     @State private var newMinutes = 45
 
@@ -14,21 +12,6 @@ struct SettingsView: View {
 
     var body: some View {
         Form {
-            Section {
-                Toggle("Launch at Login", isOn: Binding(
-                    get: { launchAtLogin },
-                    set: {
-                        LaunchAtLogin.setEnabled($0)
-                        refreshLoginState()
-                    }
-                ))
-                if needsApproval {
-                    Text("Allow Macaffeine in System Settings → General → Login Items.")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-            }
-
             Section {
                 ForEach(settings.presets, id: \.self) { minutes in
                     presetRow(minutes)
@@ -49,10 +32,8 @@ struct SettingsView: View {
             }
         }
         .formStyle(.grouped)
-        .frame(width: 400, height: 572)
-        .onReceive(NotificationCenter.default.publisher(for: NSWindow.didBecomeKeyNotification)) { _ in
-            refreshLoginState()
-        }
+        .frame(width: 460)
+        .fixedSize(horizontal: false, vertical: true)
     }
 
     private func presetRow(_ minutes: Int) -> some View {
@@ -93,10 +74,5 @@ struct SettingsView: View {
             }
             .disabled(!settings.canAddPreset(minutes: newPresetMinutes))
         }
-    }
-
-    private func refreshLoginState() {
-        launchAtLogin = LaunchAtLogin.isEnabled
-        needsApproval = LaunchAtLogin.needsApproval
     }
 }
