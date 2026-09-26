@@ -13,7 +13,7 @@ struct ShortcutRecorder: View {
             Button {
                 isRecording ? stop() : start()
             } label: {
-                Text(isRecording ? "Type shortcut…" : settings.hotKey?.displayString ?? String(localized: "None"))
+                Text(isRecording ? String(localized: "Type shortcut…") : settings.hotKey?.displayString ?? String(localized: "None"))
                     .frame(minWidth: 90)
             }
             .help(isRecording ? "Press Esc to cancel, Delete to turn the shortcut off" : "Click to record a new shortcut")
