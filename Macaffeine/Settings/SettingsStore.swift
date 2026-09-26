@@ -6,7 +6,13 @@ final class SettingsStore: ObservableObject {
         static let duration = "durationMinutes"
         static let presets = "presets"
         static let keepDisplayOn = "keepDisplayOn"
+        static let batteryGuard = "batteryGuard"
+        static let batteryThreshold = "batteryThreshold"
+        static let stopInLowPowerMode = "stopInLowPowerMode"
+        static let stopWhenOverheating = "stopWhenOverheating"
     }
+
+    static let batteryThresholds = [10, 15, 20, 25, 30, 40, 50]
 
     private let defaults: UserDefaults
 
@@ -22,6 +28,22 @@ final class SettingsStore: ObservableObject {
         didSet { defaults.set(keepDisplayOn, forKey: Key.keepDisplayOn) }
     }
 
+    @Published var batteryGuard: Bool {
+        didSet { defaults.set(batteryGuard, forKey: Key.batteryGuard) }
+    }
+
+    @Published var batteryThreshold: Int {
+        didSet { defaults.set(batteryThreshold, forKey: Key.batteryThreshold) }
+    }
+
+    @Published var stopInLowPowerMode: Bool {
+        didSet { defaults.set(stopInLowPowerMode, forKey: Key.stopInLowPowerMode) }
+    }
+
+    @Published var stopWhenOverheating: Bool {
+        didSet { defaults.set(stopWhenOverheating, forKey: Key.stopWhenOverheating) }
+    }
+
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
 
@@ -29,6 +51,20 @@ final class SettingsStore: ObservableObject {
         presets = stored.map(Self.normalized) ?? AwakeDuration.defaultPresets
         duration = AwakeDuration(storedMinutes: defaults.integer(forKey: Key.duration))
         keepDisplayOn = defaults.bool(forKey: Key.keepDisplayOn)
+        // safety rules are on unless the user turned them off
+        batteryGuard = defaults.object(forKey: Key.batteryGuard) as? Bool ?? true
+        let threshold = defaults.integer(forKey: Key.batteryThreshold)
+        batteryThreshold = Self.batteryThresholds.contains(threshold) ? threshold : 20
+        stopInLowPowerMode = defaults.object(forKey: Key.stopInLowPowerMode) as? Bool ?? true
+        stopWhenOverheating = defaults.object(forKey: Key.stopWhenOverheating) as? Bool ?? true
+    }
+
+    var safetyRules: SafetyRules {
+        SafetyRules(
+            batteryThreshold: batteryGuard ? batteryThreshold : nil,
+            stopInLowPowerMode: stopInLowPowerMode,
+            stopWhenOverheating: stopWhenOverheating
+        )
     }
 
     var durations: [AwakeDuration] {

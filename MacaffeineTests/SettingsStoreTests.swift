@@ -78,4 +78,29 @@ struct SettingsStoreTests {
 
         #expect(SettingsStore(defaults: defaults).keepDisplayOn)
     }
+
+    @Test func safetyRulesDefaultOn() {
+        let rules = SettingsStore(defaults: defaults).safetyRules
+
+        #expect(rules == SafetyRules(batteryThreshold: 20, stopInLowPowerMode: true, stopWhenOverheating: true))
+    }
+
+    @Test func persistsSafetySettings() {
+        let store = SettingsStore(defaults: defaults)
+        store.batteryGuard = false
+        store.batteryThreshold = 40
+        store.stopInLowPowerMode = false
+        store.stopWhenOverheating = false
+
+        let reloaded = SettingsStore(defaults: defaults)
+        #expect(!reloaded.batteryGuard)
+        #expect(reloaded.batteryThreshold == 40)
+        #expect(reloaded.safetyRules == SafetyRules(batteryThreshold: nil, stopInLowPowerMode: false, stopWhenOverheating: false))
+    }
+
+    @Test func invalidThresholdFallsBackToDefault() {
+        defaults.set(7, forKey: "batteryThreshold")
+
+        #expect(SettingsStore(defaults: defaults).batteryThreshold == 20)
+    }
 }
