@@ -5,20 +5,21 @@ import Combine
 final class MenuBarController: NSObject, NSMenuDelegate {
     private let manager: AwakeManager
     private let settings: SettingsStore
+    private let openSettings: () -> Void
 
     private let statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.squareLength)
     private let menu = NSMenu()
     private let toggleItem = NSMenuItem()
     private let statusLineItem = NSMenuItem()
-    private let launchAtLoginItem = NSMenuItem()
     private let durationMenu = NSMenu()
     private var durationItems: [(AwakeDuration, NSMenuItem)] = []
     private var refreshTimer: Timer?
     private var durationSubscription: AnyCancellable?
 
-    init(manager: AwakeManager, settings: SettingsStore) {
+    init(manager: AwakeManager, settings: SettingsStore, openSettings: @escaping () -> Void) {
         self.manager = manager
         self.settings = settings
+        self.openSettings = openSettings
         super.init()
 
         buildMenu()
@@ -53,10 +54,9 @@ final class MenuBarController: NSObject, NSMenuDelegate {
 
         menu.addItem(.separator())
 
-        launchAtLoginItem.title = String(localized: "Launch at Login")
-        launchAtLoginItem.target = self
-        launchAtLoginItem.action = #selector(toggleLaunchAtLogin)
-        menu.addItem(launchAtLoginItem)
+        let settingsItem = NSMenuItem(title: String(localized: "Settings…"), action: #selector(showSettings), keyEquivalent: ",")
+        settingsItem.target = self
+        menu.addItem(settingsItem)
 
         let quitItem = NSMenuItem(title: String(localized: "Quit Macaffeine"), action: #selector(NSApplication.terminate), keyEquivalent: "q")
         menu.addItem(quitItem)
@@ -120,13 +120,12 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         manager.select(duration)
     }
 
-    @objc private func toggleLaunchAtLogin() {
-        LaunchAtLogin.setEnabled(!LaunchAtLogin.isEnabled)
+    @objc private func showSettings() {
+        openSettings()
     }
 
     func menuWillOpen(_ menu: NSMenu) {
         rebuildDurationMenu()
-        launchAtLoginItem.state = LaunchAtLogin.isEnabled ? .on : .off
         update()
 
         let timer = Timer(timeInterval: 1, repeats: true) { [weak self] _ in

@@ -5,6 +5,10 @@ enum LaunchAtLogin {
         SMAppService.mainApp.status == .enabled
     }
 
+    static var needsApproval: Bool {
+        SMAppService.mainApp.status == .requiresApproval
+    }
+
     static func setEnabled(_ enabled: Bool) {
         let service = SMAppService.mainApp
         do {
