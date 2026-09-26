@@ -1,0 +1,1071 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
+    },
+    "%@ remaining · until %@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ remaining · until %2$@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Осталось %1$@ · до %2$@"
+          }
+        }
+      }
+    },
+    "%lld h" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ч"
+          }
+        }
+      }
+    },
+    "%lld min" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld мин"
+          }
+        }
+      }
+    },
+    "%lldh" : {
+      "comment" : "Compact remaining time, whole hours",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ч"
+          }
+        }
+      }
+    },
+    "%lldh %lldm" : {
+      "comment" : "Compact remaining time, hours and minutes",
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lldh %2$lldm"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld ч %2$lld мин"
+          }
+        }
+      }
+    },
+    "%lldm" : {
+      "comment" : "Compact remaining time, minutes only",
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld мин"
+          }
+        }
+      }
+    },
+    "Active for Duration" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Длительность"
+          }
+        }
+      }
+    },
+    "Add" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить"
+          }
+        }
+      }
+    },
+    "Allow Mac to Sleep" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрешить Mac засыпать"
+          }
+        }
+      }
+    },
+    "Allow Macaffeine in System Settings → General → Login Items." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрешите Macaffeine в Системных настройках → Основные → Объекты входа."
+          }
+        }
+      }
+    },
+    "Also Keeping Your Mac Awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Также не дают Mac уснуть"
+          }
+        }
+      }
+    },
+    "Also when it locks by itself after the display turns off. Command line and Shortcuts requests keep running." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В том числе когда экран блокируется сам после отключения дисплея. Запросы из командной строки и Быстрых команд продолжат работать."
+          }
+        }
+      }
+    },
+    "Battery is below %lld%%, your Mac can sleep again." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заряд ниже %lld%%, Mac снова может засыпать."
+          }
+        }
+      }
+    },
+    "Battery is below %lld%%. Plug in to keep awake." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заряд ниже %lld%%. Подключите питание, чтобы продолжить."
+          }
+        }
+      }
+    },
+    "Battery level" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уровень заряда"
+          }
+        }
+      }
+    },
+    "Below %lld%%" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ниже %lld%%"
+          }
+        }
+      }
+    },
+    "Cancel" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отменить"
+          }
+        }
+      }
+    },
+    "Choose a duration or press %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите длительность или нажмите %@"
+          }
+        }
+      }
+    },
+    "Choose a duration to keep it awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите длительность, чтобы Mac не засыпал"
+          }
+        }
+      }
+    },
+    "Click to record a new shortcut" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите, чтобы задать новое сочетание"
+          }
+        }
+      }
+    },
+    "Close" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
+          }
+        }
+      }
+    },
+    "Closing the lid still puts your Mac to sleep unless it's connected to power and an external display. That's how macOS works, Macaffeine doesn't change it." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если закрыть крышку, Mac всё равно уснёт, если он не подключён к питанию и внешнему монитору. Так устроена macOS, и Macaffeine это не меняет."
+          }
+        }
+      }
+    },
+    "Command Line Tool" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Командная строка"
+          }
+        }
+      }
+    },
+    "Copied" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скопировано"
+          }
+        }
+      }
+    },
+    "Copy" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скопировать"
+          }
+        }
+      }
+    },
+    "Couldn't keep your Mac awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось запретить сон"
+          }
+        }
+      }
+    },
+    "Durations" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Длительности"
+          }
+        }
+      }
+    },
+    "For %lld tasks" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Задач: %lld"
+          }
+        }
+      }
+    },
+    "General" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Основные"
+          }
+        }
+      }
+    },
+    "Hours" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Часы"
+          }
+        }
+      }
+    },
+    "If the time has already passed today, Macaffeine keeps your Mac awake until that time tomorrow." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если это время сегодня уже прошло, Macaffeine не даст Mac уснуть до этого времени завтра."
+          }
+        }
+      }
+    },
+    "Indefinite" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Без ограничения"
+          }
+        }
+      }
+    },
+    "Indefinite is always available." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Без ограничения» доступно всегда."
+          }
+        }
+      }
+    },
+    "Is Mac Kept Awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac сейчас не засыпает?"
+          }
+        }
+      }
+    },
+    "Keep Awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не засыпать"
+          }
+        }
+      }
+    },
+    "Keep Awake finished" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Время вышло"
+          }
+        }
+      }
+    },
+    "Keep Awake stopped" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "«Не засыпать» выключено"
+          }
+        }
+      }
+    },
+    "Keep awake until" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не засыпать до"
+          }
+        }
+      }
+    },
+    "Keep display on" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не гасить экран"
+          }
+        }
+      }
+    },
+    "Keep Display On" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не гасить экран"
+          }
+        }
+      }
+    },
+    "Keep Mac Awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не давать Mac уснуть"
+          }
+        }
+      }
+    },
+    "Keep Mac awake for ${minutes} minutes" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не давать Mac уснуть ${minutes} мин"
+          }
+        }
+      }
+    },
+    "Keep your Mac awake while a command runs, for example `macaffeine run -- make`. To install it, run this in Terminal:" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac не уснёт, пока выполняется команда, например `macaffeine run -- make`. Чтобы установить утилиту, выполните в Терминале:"
+          }
+        }
+      }
+    },
+    "Keeping your Mac awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac не уснёт"
+          }
+        }
+      }
+    },
+    "Keeps your Mac awake for a number of minutes, or until you turn it off." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не даёт Mac уснуть заданное число минут или пока вы не выключите режим."
+          }
+        }
+      }
+    },
+    "Launch at Login" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открывать при входе"
+          }
+        }
+      }
+    },
+    "Leave empty to keep your Mac awake until you turn it off." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оставьте пустым, чтобы Mac не засыпал, пока вы не выключите режим."
+          }
+        }
+      }
+    },
+    "Let it cool down and try again." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дайте ему остыть и попробуйте снова."
+          }
+        }
+      }
+    },
+    "Low Power Mode is on, your Mac can sleep again." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включено энергосбережение, Mac снова может засыпать."
+          }
+        }
+      }
+    },
+    "Low Power Mode means you want to save energy." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Раз включено энергосбережение, значит, вы бережёте заряд."
+          }
+        }
+      }
+    },
+    "Macaffeine" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine"
+          }
+        }
+      }
+    },
+    "Macaffeine is off" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine выключен"
+          }
+        }
+      }
+    },
+    "Macaffeine isn't running yet. Try again in a moment." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine ещё не запущен. Попробуйте через пару секунд."
+          }
+        }
+      }
+    },
+    "Macaffeine, keeping your Mac awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine, Mac не уснёт"
+          }
+        }
+      }
+    },
+    "Macaffeine, off" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine, выключен"
+          }
+        }
+      }
+    },
+    "macOS didn't accept this shortcut. Pick a different one." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS не приняла это сочетание. Выберите другое."
+          }
+        }
+      }
+    },
+    "macOS refused the request. Try again." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS отклонила запрос. Попробуйте снова."
+          }
+        }
+      }
+    },
+    "Minutes" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Минуты"
+          }
+        }
+      }
+    },
+    "Next to the cup, while a timer is running." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Рядом с чашкой, пока идёт таймер."
+          }
+        }
+      }
+    },
+    "None" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет"
+          }
+        }
+      }
+    },
+    "Notifications are turned off for Macaffeine." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уведомления для Macaffeine выключены."
+          }
+        }
+      }
+    },
+    "Notify when Keep Awake stops on its own" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сообщать, когда режим выключается сам"
+          }
+        }
+      }
+    },
+    "Only while running on battery." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Только при работе от аккумулятора."
+          }
+        }
+      }
+    },
+    "Open System Settings" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть Системные настройки"
+          }
+        }
+      }
+    },
+    "Other apps are keeping your Mac awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac не дают уснуть другие приложения"
+          }
+        }
+      }
+    },
+    "Press Esc to cancel, Delete to turn the shortcut off" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esc — отмена, Delete — отключить сочетание"
+          }
+        }
+      }
+    },
+    "Quit Macaffeine" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Завершить Macaffeine"
+          }
+        }
+      }
+    },
+    "Remove" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить"
+          }
+        }
+      }
+    },
+    "Remove %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить %@"
+          }
+        }
+      }
+    },
+    "Requested by another app" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "По запросу другого приложения"
+          }
+        }
+      }
+    },
+    "Reset shortcut" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить сочетание"
+          }
+        }
+      }
+    },
+    "Reset to %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вернуть %@"
+          }
+        }
+      }
+    },
+    "Restore Defaults" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вернуть стандартные"
+          }
+        }
+      }
+    },
+    "Safety" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Защита"
+          }
+        }
+      }
+    },
+    "Settings…" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки…"
+          }
+        }
+      }
+    },
+    "Show remaining time in the menu bar" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать оставшееся время в строке меню"
+          }
+        }
+      }
+    },
+    "Stop in Low Power Mode" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключать в режиме энергосбережения"
+          }
+        }
+      }
+    },
+    "Stop when battery is low" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключать при низком заряде"
+          }
+        }
+      }
+    },
+    "Stop when you lock your screen" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключать при блокировке экрана"
+          }
+        }
+      }
+    },
+    "Stop when your Mac overheats" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключать при перегреве"
+          }
+        }
+      }
+    },
+    "Stopped by Low Power Mode" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключено энергосбережением"
+          }
+        }
+      }
+    },
+    "Stopped to save battery" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключено, чтобы сберечь заряд"
+          }
+        }
+      }
+    },
+    "Stopped when the screen was locked" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключено при блокировке экрана"
+          }
+        }
+      }
+    },
+    "Stopped, your Mac is too hot" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключено: Mac перегрелся"
+          }
+        }
+      }
+    },
+    "Tells whether Macaffeine is keeping your Mac awake right now." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сообщает, не даёт ли Macaffeine сейчас Mac уснуть."
+          }
+        }
+      }
+    },
+    "The screen won't dim or turn off while your Mac is kept awake." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экран не будет тускнеть и гаснуть, пока Mac не засыпает."
+          }
+        }
+      }
+    },
+    "Timer finished at %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймер закончился в %@"
+          }
+        }
+      }
+    },
+    "Toggle Keep Awake" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переключить «Не засыпать»"
+          }
+        }
+      }
+    },
+    "Turn off Low Power Mode to keep awake." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключите энергосбережение, чтобы продолжить."
+          }
+        }
+      }
+    },
+    "Turns Keep Awake on with the selected duration, or off." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включает «Не засыпать» на выбранное время или выключает."
+          }
+        }
+      }
+    },
+    "Turns off Keep Awake, including requests from the command line." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключает «Не засыпать», включая запросы из командной строки."
+          }
+        }
+      }
+    },
+    "Type shortcut…" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите сочетание…"
+          }
+        }
+      }
+    },
+    "Until %@…" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "До %@…"
+          }
+        }
+      }
+    },
+    "Until you turn it off" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока вы не выключите"
+          }
+        }
+      }
+    },
+    "Until…" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "До…"
+          }
+        }
+      }
+    },
+    "Version %@" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия %@"
+          }
+        }
+      }
+    },
+    "When macOS reports a critical temperature, for example in a closed bag." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Когда macOS сообщает о критической температуре, например в закрытой сумке."
+          }
+        }
+      }
+    },
+    "When the timer ends or a safety rule turns it off." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Когда заканчивается таймер или срабатывает защита."
+          }
+        }
+      }
+    },
+    "While %@ is running" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока работает %@"
+          }
+        }
+      }
+    },
+    "Window" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Окно"
+          }
+        }
+      }
+    },
+    "You locked the screen, your Mac can sleep again." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экран заблокирован, Mac снова может засыпать."
+          }
+        }
+      }
+    },
+    "Your Mac can sleep" : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac может уснуть"
+          }
+        }
+      }
+    },
+    "Your Mac can sleep normally again." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac снова может засыпать как обычно."
+          }
+        }
+      }
+    },
+    "Your Mac is too hot, it can sleep again." : {
+      "localizations" : {
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac перегрелся и снова может засыпать."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -54,8 +54,10 @@ enum RemainingTime {
         let rest = minutes % 60
 
         if hours == 0 {
-            return "\(rest)m"
+            return String(localized: "\(rest)m", comment: "Compact remaining time, minutes only")
         }
-        return rest == 0 ? "\(hours)h" : "\(hours)h \(rest)m"
+        return rest == 0
+            ? String(localized: "\(hours)h", comment: "Compact remaining time, whole hours")
+            : String(localized: "\(hours)h \(rest)m", comment: "Compact remaining time, hours and minutes")
     }
 }
