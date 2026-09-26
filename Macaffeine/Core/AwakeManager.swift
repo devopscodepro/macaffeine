@@ -12,7 +12,8 @@ final class AwakeManager {
             if state != oldValue { onChange?(state) }
         }
     }
-    private(set) var duration: AwakeDuration
+    // changing it directly only affects the next activation, use select() to restart the countdown
+    var duration: AwakeDuration
     var onChange: ((AwakeState) -> Void)?
 
     private let assertion: PowerAssertionManaging

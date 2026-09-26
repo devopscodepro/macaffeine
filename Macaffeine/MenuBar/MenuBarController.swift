@@ -1,4 +1,5 @@
 import AppKit
+import Combine
 
 @MainActor
 final class MenuBarController: NSObject, NSMenuDelegate {
@@ -10,8 +11,10 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     private let toggleItem = NSMenuItem()
     private let statusLineItem = NSMenuItem()
     private let launchAtLoginItem = NSMenuItem()
+    private let durationMenu = NSMenu()
     private var durationItems: [(AwakeDuration, NSMenuItem)] = []
     private var refreshTimer: Timer?
+    private var durationSubscription: AnyCancellable?
 
     init(manager: AwakeManager, settings: SettingsStore) {
         self.manager = manager
@@ -24,6 +27,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         statusItem.button?.toolTip = "Macaffeine"
 
         manager.onChange = { [weak self] _ in self?.update() }
+        durationSubscription = settings.$duration.sink { [weak manager] in manager?.duration = $0 }
         update()
     }
 
@@ -41,15 +45,11 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         menu.addItem(statusLineItem)
 
         menu.addItem(.separator())
-        menu.addItem(sectionHeader(String(localized: "Duration")))
 
-        for duration in settings.durations {
-            let item = NSMenuItem(title: duration.title, action: #selector(selectDuration), keyEquivalent: "")
-            item.target = self
-            item.representedObject = duration.storedMinutes
-            menu.addItem(item)
-            durationItems.append((duration, item))
-        }
+        let durationItem = NSMenuItem(title: String(localized: "Active for Duration"), action: nil, keyEquivalent: "")
+        durationMenu.autoenablesItems = false
+        durationItem.submenu = durationMenu
+        menu.addItem(durationItem)
 
         menu.addItem(.separator())
 
@@ -62,13 +62,22 @@ final class MenuBarController: NSObject, NSMenuDelegate {
         menu.addItem(quitItem)
     }
 
-    private func sectionHeader(_ title: String) -> NSMenuItem {
-        if #available(macOS 14, *) {
-            return .sectionHeader(title: title)
+    // presets can change in settings, so rebuild every time the menu opens
+    private func rebuildDurationMenu() {
+        durationMenu.removeAllItems()
+        durationItems = []
+
+        for duration in settings.durations {
+            let item = NSMenuItem(title: duration.title, action: #selector(selectDuration), keyEquivalent: "")
+            item.target = self
+            item.representedObject = duration.storedMinutes
+            durationMenu.addItem(item)
+            durationItems.append((duration, item))
+
+            if duration == .indefinite {
+                durationMenu.addItem(.separator())
+            }
         }
-        let item = NSMenuItem(title: title, action: nil, keyEquivalent: "")
-        item.isEnabled = false
-        return item
     }
 
     private func update() {
@@ -116,6 +125,7 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     }
 
     func menuWillOpen(_ menu: NSMenu) {
+        rebuildDurationMenu()
         launchAtLoginItem.state = LaunchAtLogin.isEnabled ? .on : .off
         update()
 
