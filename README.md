@@ -46,7 +46,7 @@ Builds are signed with a Developer ID and notarized by Apple. Requires macOS 13 
 
 ## Using it
 
-| | |
+| Action | What it does |
 |---|---|
 | Click the cup | Open the menu |
 | <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>K</kbd> | Toggle keep awake with the selected duration |
