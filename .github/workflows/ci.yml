@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [dev, main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Xcode version
+        run: xcodebuild -version
+
+      - name: Check shell scripts
+        run: |
+          sh -n Macaffeine/Resources/macaffeine
+          sh -n scripts/release.sh
+
+      - name: Test
+        run: xcodebuild -project Macaffeine.xcodeproj -scheme Macaffeine -derivedDataPath build/DerivedData test
+
+      - name: Release build
+        run: scripts/release.sh --dry-run
+
+      - name: Upload build log on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log
+          path: dist/*/build.log
+          if-no-files-found: ignore
