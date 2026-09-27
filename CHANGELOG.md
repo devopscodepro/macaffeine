@@ -32,5 +32,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Keep awake turns off by itself when the duration ends, including after the Mac wakes from sleep.
 - Global shortcut ⌃⌥⌘K to toggle.
 - Selected duration is remembered between launches.
+- Disk image with a drag-to-Applications window.
 - App icon and a matching menu bar icon: an empty cup when off, a hot one with steam when on.
 - MIT license.
