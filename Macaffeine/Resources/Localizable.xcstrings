@@ -3,7 +3,19 @@
   "strings" : {
     "%@" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -19,30 +31,66 @@
             "value" : "%1$@ remaining · until %2$@"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ 남음 · %2$@까지"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Осталось %1$@ · до %2$@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "剩余 %1$@ · 至 %2$@"
           }
         }
       }
     },
     "%lld h" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld시간"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld ч"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 小时"
           }
         }
       }
     },
     "%lld min" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld분"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld мин"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 分钟"
           }
         }
       }
@@ -50,10 +98,22 @@
     "%lldh" : {
       "comment" : "Compact remaining time, whole hours",
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld시간"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld ч"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld小时"
           }
         }
       }
@@ -67,10 +127,22 @@
             "value" : "%1$lldh %2$lldm"
           }
         },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld시간 %2$lld분"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%1$lld ч %2$lld мин"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld小时%2$lld分"
           }
         }
       }
@@ -78,457 +150,1009 @@
     "%lldm" : {
       "comment" : "Compact remaining time, minutes only",
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld분"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld мин"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld分钟"
           }
         }
       }
     },
     "Active for Duration" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "유지 시간"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Длительность"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "持续时间"
           }
         }
       }
     },
     "Add" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "추가"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Добавить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加"
           }
         }
       }
     },
     "Allow Mac to Sleep" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 잠자기 허용"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Разрешить Mac засыпать"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "允许 Mac 睡眠"
           }
         }
       }
     },
     "Allow Macaffeine in System Settings → General → Login Items." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템 설정 → 일반 → 로그인 항목에서 Macaffeine을 허용하세요."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Разрешите Macaffeine в Системных настройках → Основные → Объекты входа."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在“系统设置”→“通用”→“登录项”中允许 Macaffeine。"
           }
         }
       }
     },
     "Also Keeping Your Mac Awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 잠자기를 막고 있는 다른 항목"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Также не дают Mac уснуть"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其他阻止 Mac 睡眠的项目"
           }
         }
       }
     },
     "Also when it locks by itself after the display turns off. Command line and Shortcuts requests keep running." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "디스플레이가 꺼진 뒤 화면이 자동으로 잠길 때도 포함됩니다. 명령어와 단축어로 보낸 요청은 계속 유지됩니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "В том числе когда экран блокируется сам после отключения дисплея. Запросы из командной строки и Быстрых команд продолжат работать."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "包括显示器关闭后屏幕自动锁定的情况。来自命令行和快捷指令的请求会继续保持。"
           }
         }
       }
     },
     "Battery is below %lld%%, your Mac can sleep again." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배터리가 %lld%% 미만이라 Mac이 다시 잠자기할 수 있습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Заряд ниже %lld%%, Mac снова может засыпать."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池电量低于 %lld%%，Mac 可以重新进入睡眠。"
           }
         }
       }
     },
     "Battery is below %lld%%. Plug in to keep awake." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배터리가 %lld%% 미만입니다. 계속하려면 전원을 연결하세요."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Заряд ниже %lld%%. Подключите питание, чтобы продолжить."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池电量低于 %lld%%。请接通电源以继续。"
           }
         }
       }
     },
     "Battery level" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배터리 잔량"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Уровень заряда"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电池电量"
           }
         }
       }
     },
     "Below %lld%%" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld%% 미만"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ниже %lld%%"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低于 %lld%%"
           }
         }
       }
     },
     "Cancel" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отменить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
           }
         }
       }
     },
     "Choose a duration or press %@" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간을 선택하거나 %@ 키를 누르세요"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выберите длительность или нажмите %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择持续时间或按 %@"
           }
         }
       }
     },
     "Choose a duration to keep it awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠자기를 막을 시간을 선택하세요"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выберите длительность, чтобы Mac не засыпал"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择保持唤醒的时间"
           }
         }
       }
     },
     "Click to record a new shortcut" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "클릭하여 새 단축키 입력"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите, чтобы задать новое сочетание"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点按以录制新的快捷键"
           }
         }
       }
     },
     "Close" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Закрыть"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
           }
         }
       }
     },
     "Closing the lid still puts your Mac to sleep unless it's connected to power and an external display. That's how macOS works, Macaffeine doesn't change it." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전원과 외장 디스플레이에 연결되어 있지 않으면 덮개를 닫을 때 Mac은 잠자기 상태가 됩니다. macOS의 동작 방식이며 Macaffeine은 이를 바꾸지 않습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Если закрыть крышку, Mac всё равно уснёт, если он не подключён к питанию и внешнему монитору. Так устроена macOS, и Macaffeine это не меняет."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "除非连接了电源和外接显示器，合上屏幕后 Mac 仍会进入睡眠。这是 macOS 的工作方式，Macaffeine 不会改变它。"
           }
         }
       }
     },
     "Command Line Tool" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "명령어 도구"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Командная строка"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "命令行工具"
           }
         }
       }
     },
     "Copied" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "복사됨"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скопировано"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已拷贝"
           }
         }
       }
     },
     "Copy" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "복사"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Скопировать"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拷贝"
           }
         }
       }
     },
     "Couldn't keep your Mac awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 잠자기를 막지 못했습니다"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не удалось запретить сон"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法保持 Mac 唤醒"
           }
         }
       }
     },
     "Durations" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Длительности"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "时长"
           }
         }
       }
     },
     "For %lld tasks" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "작업 %lld개 실행 중"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Задач: %lld"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld 个任务运行中"
           }
         }
       }
     },
     "General" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일반"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Основные"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通用"
           }
         }
       }
     },
     "Hours" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시간"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Часы"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "小时"
           }
         }
       }
     },
     "If the time has already passed today, Macaffeine keeps your Mac awake until that time tomorrow." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 이미 지난 시간이면 내일 그 시간까지 Mac이 잠자기하지 않습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Если это время сегодня уже прошло, Macaffeine не даст Mac уснуть до этого времени завтра."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果今天已过该时间，Macaffeine 会让 Mac 保持唤醒直到明天的这个时间。"
           }
         }
       }
     },
     "Indefinite" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "무기한"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Без ограничения"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无限期"
           }
         }
       }
     },
     "Indefinite is always available." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "무기한은 항상 사용할 수 있습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "«Без ограничения» доступно всегда."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“无限期”始终可用。"
           }
         }
       }
     },
     "Is Mac Kept Awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 잠자기 방지 중인지 확인"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac сейчас не засыпает?"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 是否保持唤醒"
           }
         }
       }
     },
     "Keep Awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠자기 방지"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не засыпать"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持唤醒"
           }
         }
       }
     },
     "Keep Awake finished" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠자기 방지 종료"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Время вышло"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持唤醒已结束"
           }
         }
       }
     },
     "Keep Awake stopped" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠자기 방지 중단됨"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "«Не засыпать» выключено"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持唤醒已停止"
           }
         }
       }
     },
     "Keep awake until" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠자기 방지 종료 시각"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не засыпать до"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持唤醒直到"
           }
         }
       }
     },
     "Keep display on" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "디스플레이 켜두기"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не гасить экран"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持显示器开启"
           }
         }
       }
     },
     "Keep Display On" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "디스플레이 켜두기"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не гасить экран"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持显示器开启"
           }
         }
       }
     },
     "Keep Mac Awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 잠자기 방지"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не давать Mac уснуть"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持 Mac 唤醒"
           }
         }
       }
     },
     "Keep Mac awake for ${minutes} minutes" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${minutes}분 동안 Mac 잠자기 방지"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не давать Mac уснуть ${minutes} мин"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持 Mac 唤醒 ${minutes} 分钟"
           }
         }
       }
     },
     "Keep your Mac awake while a command runs, for example `macaffeine run -- make`. To install it, run this in Terminal:" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "명령이 실행되는 동안 Mac 잠자기를 막습니다. 예: `macaffeine run -- make`. 설치하려면 터미널에서 다음을 실행하세요:"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac не уснёт, пока выполняется команда, например `macaffeine run -- make`. Чтобы установить утилиту, выполните в Терминале:"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在命令运行期间保持 Mac 唤醒，例如 `macaffeine run -- make`。要安装它，请在“终端”中运行："
           }
         }
       }
     },
     "Keeping your Mac awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 잠자기 방지 중"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac не уснёт"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 保持唤醒中"
           }
         }
       }
     },
     "Keeps your Mac awake for a number of minutes, or until you turn it off." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지정한 시간(분) 동안 또는 끌 때까지 Mac 잠자기를 막습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не даёт Mac уснуть заданное число минут или пока вы не выключите режим."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让 Mac 在指定分钟内保持唤醒，或直到你将其关闭。"
           }
         }
       }
     },
     "Launch at Login" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인 시 열기"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Открывать при входе"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "登录时打开"
           }
         }
       }
     },
     "Leave empty to keep your Mac awake until you turn it off." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "비워 두면 끌 때까지 Mac 잠자기를 막습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Оставьте пустым, чтобы Mac не засыпал, пока вы не выключите режим."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "留空则让 Mac 保持唤醒，直到你将其关闭。"
           }
         }
       }
     },
     "Let it cool down and try again." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "열을 식힌 후 다시 시도하세요."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дайте ему остыть и попробуйте снова."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请等待降温后重试。"
           }
         }
       }
     },
     "Low Power Mode is on, your Mac can sleep again." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저전력 모드가 켜져 있어 Mac이 다시 잠자기할 수 있습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Включено энергосбережение, Mac снова может засыпать."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低电量模式已开启，Mac 可以重新进入睡眠。"
           }
         }
       }
     },
     "Low Power Mode means you want to save energy." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저전력 모드는 에너지를 아끼고 싶다는 뜻이니까요."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Раз включено энергосбережение, значит, вы бережёте заряд."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启低电量模式说明你想节省电量。"
           }
         }
       }
     },
     "Macaffeine" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine"
+          }
+        },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Macaffeine"
@@ -538,530 +1162,1166 @@
     },
     "Macaffeine is off" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine 꺼짐"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Macaffeine выключен"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine 已关闭"
           }
         }
       }
     },
     "Macaffeine isn't running yet. Try again in a moment." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine이 아직 실행되지 않았습니다. 잠시 후 다시 시도하세요."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Macaffeine ещё не запущен. Попробуйте через пару секунд."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine 尚未运行，请稍后重试。"
           }
         }
       }
     },
     "Macaffeine, keeping your Mac awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine, Mac 잠자기 방지 중"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Macaffeine, Mac не уснёт"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine，Mac 保持唤醒中"
           }
         }
       }
     },
     "Macaffeine, off" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine, 꺼짐"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Macaffeine, выключен"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine，已关闭"
           }
         }
       }
     },
     "macOS didn't accept this shortcut. Pick a different one." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS에서 이 단축키를 사용할 수 없습니다. 다른 단축키를 선택하세요."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "macOS не приняла это сочетание. Выберите другое."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 不接受此快捷键，请选择其他快捷键。"
           }
         }
       }
     },
     "macOS refused the request. Try again." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS가 요청을 거부했습니다. 다시 시도하세요."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "macOS отклонила запрос. Попробуйте снова."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS 拒绝了请求，请重试。"
           }
         }
       }
     },
     "Minutes" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "분"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Минуты"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分钟"
           }
         }
       }
     },
     "Next to the cup, while a timer is running." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이머가 작동하는 동안 컵 옆에 표시됩니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Рядом с чашкой, пока идёт таймер."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计时器运行时显示在咖啡杯旁边。"
           }
         }
       }
     },
     "None" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "없음"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нет"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无"
           }
         }
       }
     },
     "Notifications are turned off for Macaffeine." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine 알림이 꺼져 있습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Уведомления для Macaffeine выключены."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine 的通知已关闭。"
           }
         }
       }
     },
     "Notify when Keep Awake stops on its own" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠자기 방지가 자동으로 꺼지면 알림"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сообщать, когда режим выключается сам"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持唤醒自动停止时发送通知"
           }
         }
       }
     },
     "Only while running on battery." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배터리 전원 사용 중에만 적용됩니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Только при работе от аккумулятора."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅在使用电池供电时。"
           }
         }
       }
     },
     "Open System Settings" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시스템 설정 열기"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Открыть Системные настройки"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开系统设置"
           }
         }
       }
     },
     "Other apps are keeping your Mac awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다른 앱이 Mac 잠자기를 막고 있습니다"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac не дают уснуть другие приложения"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "其他 App 正在阻止 Mac 睡眠"
           }
         }
       }
     },
     "Press Esc to cancel, Delete to turn the shortcut off" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esc: 취소, Delete: 단축키 끄기"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esc — отмена, Delete — отключить сочетание"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按 Esc 取消，按 Delete 关闭快捷键"
           }
         }
       }
     },
     "Quit Macaffeine" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine 종료"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Завершить Macaffeine"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "退出 Macaffeine"
           }
         }
       }
     },
     "Remove" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제거"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удалить"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除"
           }
         }
       }
     },
     "Remove %@" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 제거"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удалить %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "移除%@"
           }
         }
       }
     },
     "Requested by another app" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다른 앱의 요청"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "По запросу другого приложения"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "由其他 App 请求"
           }
         }
       }
     },
     "Reset shortcut" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단축키 재설정"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сбросить сочетание"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置快捷键"
           }
         }
       }
     },
     "Reset to %@" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@(으)로 재설정"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вернуть %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置为 %@"
           }
         }
       }
     },
     "Restore Defaults" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본값 복원"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вернуть стандартные"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复默认"
           }
         }
       }
     },
     "Safety" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "안전"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Защита"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "安全"
           }
         }
       }
     },
     "Settings…" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정…"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Настройки…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置…"
           }
         }
       }
     },
     "Show remaining time in the menu bar" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴 막대에 남은 시간 표시"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Показывать оставшееся время в строке меню"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在菜单栏中显示剩余时间"
           }
         }
       }
     },
     "Stop in Low Power Mode" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저전력 모드에서 중단"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключать в режиме энергосбережения"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "低电量模式时停止"
           }
         }
       }
     },
     "Stop when battery is low" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배터리가 부족하면 중단"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключать при низком заряде"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "电量不足时停止"
           }
         }
       }
     },
     "Stop when you lock your screen" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "화면을 잠그면 중단"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключать при блокировке экрана"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "锁定屏幕时停止"
           }
         }
       }
     },
     "Stop when your Mac overheats" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 과열되면 중단"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключать при перегреве"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 过热时停止"
           }
         }
       }
     },
     "Stopped by Low Power Mode" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저전력 모드로 인해 중단됨"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключено энергосбережением"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "因低电量模式已停止"
           }
         }
       }
     },
     "Stopped to save battery" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배터리 절약을 위해 중단됨"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключено, чтобы сберечь заряд"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "为节省电量已停止"
           }
         }
       }
     },
     "Stopped when the screen was locked" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "화면이 잠겨 중단됨"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключено при блокировке экрана"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "屏幕锁定时已停止"
           }
         }
       }
     },
     "Stopped, your Mac is too hot" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 과열되어 중단됨"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключено: Mac перегрелся"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 过热，已停止"
           }
         }
       }
     },
     "Tells whether Macaffeine is keeping your Mac awake right now." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine이 지금 Mac 잠자기를 막고 있는지 알려줍니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сообщает, не даёт ли Macaffeine сейчас Mac уснуть."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "告诉你 Macaffeine 当前是否正在让 Mac 保持唤醒。"
           }
         }
       }
     },
     "The screen won't dim or turn off while your Mac is kept awake." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠자기 방지 중에는 화면이 어두워지거나 꺼지지 않습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Экран не будет тускнеть и гаснуть, пока Mac не засыпает."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保持唤醒期间，屏幕不会变暗或关闭。"
           }
         }
       }
     },
     "Timer finished at %@" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@에 타이머 종료"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Таймер закончился в %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计时器已于 %@ 结束"
           }
         }
       }
     },
     "Toggle Keep Awake" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠자기 방지 켜기/끄기"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Переключить «Не засыпать»"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "切换保持唤醒"
           }
         }
       }
     },
     "Turn off Low Power Mode to keep awake." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "계속하려면 저전력 모드를 끄세요."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключите энергосбережение, чтобы продолжить."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭低电量模式以继续保持唤醒。"
           }
         }
       }
     },
     "Turns Keep Awake on with the selected duration, or off." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "선택한 시간으로 잠자기 방지를 켜거나 끕니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Включает «Не засыпать» на выбранное время или выключает."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按所选时长开启保持唤醒，或将其关闭。"
           }
         }
       }
     },
     "Turns off Keep Awake, including requests from the command line." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "명령어로 보낸 요청을 포함해 잠자기 방지를 끕니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выключает «Не засыпать», включая запросы из командной строки."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭保持唤醒，包括来自命令行的请求。"
           }
         }
       }
     },
     "Type shortcut…" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단축키 입력…"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите сочетание…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "键入快捷键…"
           }
         }
       }
     },
     "Until %@…" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@까지…"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "До %@…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "至 %@…"
           }
         }
       }
     },
     "Until you turn it off" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "끌 때까지"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пока вы не выключите"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直到你将其关闭"
           }
         }
       }
     },
     "Until…" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "종료 시각 지정…"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "До…"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直到…"
           }
         }
       }
     },
     "Version %@" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전 %@"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Версия %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本 %@"
           }
         }
       }
     },
     "When macOS reports a critical temperature, for example in a closed bag." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫힌 가방 안처럼 macOS가 위험 온도를 알릴 때 적용됩니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Когда macOS сообщает о критической температуре, например в закрытой сумке."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当 macOS 报告温度过高时，例如放在合上的包里。"
           }
         }
       }
     },
     "When the timer ends or a safety rule turns it off." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타이머가 끝나거나 안전 규칙이 작동할 때 알립니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Когда заканчивается таймер или срабатывает защита."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "计时器结束或安全规则将其关闭时。"
           }
         }
       }
     },
     "While %@ is running" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 실행 중"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пока работает %@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 运行期间"
           }
         }
       }
     },
     "Window" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "윈도우"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Окно"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "窗口"
           }
         }
       }
     },
     "You locked the screen, your Mac can sleep again." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "화면을 잠가서 Mac이 다시 잠자기할 수 있습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Экран заблокирован, Mac снова может засыпать."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你已锁定屏幕，Mac 可以重新进入睡眠。"
           }
         }
       }
     },
     "Your Mac can sleep" : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 잠자기할 수 있음"
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac может уснуть"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 可以睡眠"
           }
         }
       }
     },
     "Your Mac can sleep normally again." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 다시 평소처럼 잠자기할 수 있습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac снова может засыпать как обычно."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 可以恢复正常睡眠了。"
           }
         }
       }
     },
     "Your Mac is too hot, it can sleep again." : {
       "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 과열되어 다시 잠자기할 수 있습니다."
+          }
+        },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac перегрелся и снова может засыпать."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 过热，可以重新进入睡眠。"
           }
         }
       }
