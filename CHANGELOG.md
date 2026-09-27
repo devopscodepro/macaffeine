@@ -23,8 +23,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Shortcuts actions: Keep Mac Awake, Allow Mac to Sleep, Toggle Keep Awake, Is Mac Kept Awake.
 - Until… in the duration menu to keep awake until a time of day.
 - Ready-made Claude Code hooks, see docs/automation.md.
-- "Also Keeping Your Mac Awake" in the menu lists other apps and tools that block sleep, like caffeinate started by another app.
-- Option to stop when you lock your screen. Command line and Shortcuts requests keep running.
+- "Also Keeping Your Mac Awake" in the menu lists other apps and tools that block sleep and for how long, like caffeinate started by another app.
+- Keep awake turns off after you put the Mac to sleep or close the lid (on by default), and optionally when you lock the screen. Holds from `macaffeine run` keep running.
 - Option to show the remaining time next to the menu bar icon.
 - The global shortcut can be changed or turned off in Settings.
 - Korean, Simplified Chinese and Russian localizations. The app follows the system language and falls back to English.
