@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Option to stop when you lock your screen. Command line and Shortcuts requests keep running.
 - Option to show the remaining time next to the menu bar icon.
 - The global shortcut can be changed or turned off in Settings.
-- Russian localization.
+- Korean, Simplified Chinese and Russian localizations. The app follows the system language and falls back to English.
 - Your own duration presets (add, remove, restore defaults).
 - Keep awake turns off by itself when the duration ends, including after the Mac wakes from sleep.
 - Global shortcut ⌃⌥⌘K to toggle.
