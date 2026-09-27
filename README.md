@@ -30,8 +30,8 @@ Built for those moments when you start a long build, deploy, AI agent, or remote
 - **One click or one shortcut.** Toggle from the menu bar or press <kbd>⌃</kbd><kbd>⌥</kbd><kbd>⌘</kbd><kbd>K</kbd> from anywhere. The shortcut can be changed or turned off.
 - **Timers that don't lie.** Keep awake indefinitely, for a preset (5 minutes to 5 hours by default, and you can add your own) or until a time of day. The countdown uses the real clock, so it stays right even if the Mac did sleep in between.
 - **Your display can still sleep.** Only idle system sleep is blocked by default. Turn on *Keep Display On* when you need the screen too.
-- **Safety first.** Keep awake stops by itself when the battery runs low, when Low Power Mode is on, or when the Mac gets critically hot. Optionally it also stops when you lock the screen.
-- **Knows what else is going on.** The menu shows other apps and tools that are keeping your Mac awake, like a `caffeinate` started by a script.
+- **Safety first.** Keep awake stops by itself when the battery runs low, when Low Power Mode is on, or when the Mac gets critically hot. It also turns off after you put your Mac to sleep, so a forgotten session doesn't carry over — and optionally when you lock the screen.
+- **Knows what else is going on.** The menu shows other apps and tools that are keeping your Mac awake and for how long, like a `caffeinate` someone forgot in a Terminal tab.
 - **Made for automation.** A command line tool, a `macaffeine://` URL scheme, Shortcuts actions and ready-made hooks for AI coding agents.
 - **Native and tiny.** Swift, AppKit and SwiftUI, about 1 MB zipped. Sandboxed, zero dependencies, zero network access.
 - **Speaks your language.** English, 한국어, 简体中文 and Русский, picked from your system language.
@@ -88,7 +88,7 @@ The cup is empty when your Mac can sleep and steaming when Macaffeine keeps it a
 
 - **General** — launch at login, keep display on, remaining time next to the cup, the global shortcut, notifications and the command line tool.
 - **Durations** — the presets in the menu. Add your own, remove the ones you never use.
-- **Safety** — battery level, Low Power Mode, overheating and screen lock rules.
+- **Safety** — battery level, Low Power Mode, overheating, sleep and screen lock rules.
 
 ## Automation
 
@@ -145,7 +145,7 @@ Local builds are signed ad hoc, no Apple Developer account needed.
 
 ## Contributing
 
-Bug reports, ideas and pull requests are welcome. Please open an issue first for bigger changes, so we can agree on the approach. Translations are especially welcome — all strings live in `Macaffeine/Resources/Localizable.xcstrings`.
+Bug reports, translations and small pull requests are welcome — see [CONTRIBUTING.md](CONTRIBUTING.md). Questions and ideas go to [Discussions](https://github.com/devopscodepro/macaffeine/discussions), security issues to a [private report](SECURITY.md).
 
 ## License
 

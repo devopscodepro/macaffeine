@@ -7,7 +7,7 @@ There are two kinds of requests:
 - **Session** — what you start from the menu, the hotkey, `macaffeine on` or `macaffeine://activate`. There's only one.
 - **Hold** — a named request from a script or tool, e.g. "while `make` runs". There can be many. A hold can be tied to a process and goes away when that process exits, even if it crashes.
 
-Your Mac stays awake while there's a session or at least one hold. Turning Keep Awake off from the menu or hotkey drops everything.
+Your Mac stays awake while there's a session or at least one hold. Turning Keep Awake off from the menu or hotkey drops everything. The *Stop after your Mac sleeps* and *Stop when you lock your screen* rules end only the session — holds belong to running processes and keep going.
 
 ## Command line
 
