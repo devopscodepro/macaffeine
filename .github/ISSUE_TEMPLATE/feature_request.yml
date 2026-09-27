@@ -1,0 +1,28 @@
+name: Feature request
+description: Suggest something concrete to add or change
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Macaffeine tries to stay small and simple, so not every idea will make it in — but every one gets read.
+        Not sure yet or want to talk it through first? Start a thread in [Ideas](https://github.com/devopscodepro/macaffeine/discussions/categories/ideas).
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you trying to solve?
+      placeholder: When I run long backups over Wi‑Fi, …
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help?
+      description: How you imagine it working in Macaffeine.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: What do you do now instead?
+      description: Workarounds, other apps, scripts.
