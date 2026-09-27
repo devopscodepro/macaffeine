@@ -1,5 +1,5 @@
+import AppKit
 import Combine
-import Foundation
 
 @MainActor
 final class SafetyGuard {
@@ -7,9 +7,15 @@ final class SafetyGuard {
     private let settings: SettingsStore
     private let monitor: PowerMonitor
     private var subscription: AnyCancellable?
-    private var lockObserver: NSObjectProtocol?
+    private var observers: [NSObjectProtocol] = []
 
-    init(manager: AwakeManager, settings: SettingsStore, monitor: PowerMonitor) {
+    init(
+        manager: AwakeManager,
+        settings: SettingsStore,
+        monitor: PowerMonitor,
+        workspaceCenter: NotificationCenter = NSWorkspace.shared.notificationCenter,
+        distributedCenter: NotificationCenter = DistributedNotificationCenter.default()
+    ) {
         self.manager = manager
         self.settings = settings
         self.monitor = monitor
@@ -21,13 +27,27 @@ final class SafetyGuard {
             .receive(on: RunLoop.main)
             .sink { [weak self] in self?.evaluate() }
 
-        lockObserver = DistributedNotificationCenter.default().addObserver(
+        observers.append(distributedCenter.addObserver(
             forName: Notification.Name("com.apple.screenIsLocked"),
             object: nil,
             queue: .main
         ) { [weak self] _ in
             MainActor.assumeIsolated { self?.screenLocked() }
-        }
+        })
+        // idle sleep can't happen while we hold the assertion, so any sleep now was asked for
+        observers.append(workspaceCenter.addObserver(
+            forName: NSWorkspace.willSleepNotification,
+            object: nil,
+            queue: .main
+        ) { [weak self] _ in
+            MainActor.assumeIsolated { self?.systemWillSleep() }
+        })
+    }
+
+    private func systemWillSleep() {
+        guard settings.stopAfterSleep, manager.isSessionActive else { return }
+        Log.awake.info("Mac is going to sleep, ending session")
+        manager.stopSession(because: .systemSlept)
     }
 
     private func screenLocked() {

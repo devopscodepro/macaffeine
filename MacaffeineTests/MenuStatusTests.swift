@@ -96,4 +96,11 @@ struct MenuStatusTests {
 
         #expect(status.detail == "Choose a duration to keep it awake")
     }
+
+    @Test func sleptIsCalmNotAWarning() {
+        let status = status(.inactive, .systemSlept)
+
+        #expect(status.tone == .idle)
+        #expect(status.detail == "Stopped when your Mac went to sleep")
+    }
 }

@@ -280,24 +280,24 @@
         }
       }
     },
-    "Also when it locks by itself after the display turns off. Command line and Shortcuts requests keep running." : {
+    "Also when it locks by itself after the display turns off." : {
       "localizations" : {
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "디스플레이가 꺼진 뒤 화면이 자동으로 잠길 때도 포함됩니다. 명령어와 단축어로 보낸 요청은 계속 유지됩니다."
+            "value" : "디스플레이가 꺼진 뒤 화면이 자동으로 잠길 때도 포함됩니다."
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "В том числе когда экран блокируется сам после отключения дисплея. Запросы из командной строки и Быстрых команд продолжат работать."
+            "value" : "В том числе когда экран блокируется сам после отключения дисплея."
           }
         },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "包括显示器关闭后屏幕自动锁定的情况。来自命令行和快捷指令的请求会继续保持。"
+            "value" : "包括显示器关闭后屏幕自动锁定的情况。"
           }
         }
       }
@@ -540,6 +540,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "命令行工具"
+          }
+        }
+      }
+    },
+    "Commands kept awake with `macaffeine run` or `hold` keep running in both cases." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "`macaffeine run` 또는 `hold`로 유지 중인 명령은 두 경우 모두 계속 실행됩니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Команды, запущенные через `macaffeine run` или `hold`, в обоих случаях продолжают работать."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通过 `macaffeine run` 或 `hold` 保持唤醒的命令在这两种情况下都会继续运行。"
           }
         }
       }
@@ -1710,6 +1732,28 @@
         }
       }
     },
+    "Stop after your Mac sleeps" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 잠자기하면 중단"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключать после сна Mac"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 睡眠后停止"
+          }
+        }
+      }
+    },
     "Stop in Low Power Mode" : {
       "localizations" : {
         "ko" : {
@@ -1860,6 +1904,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "屏幕锁定时已停止"
+          }
+        }
+      }
+    },
+    "Stopped when your Mac went to sleep" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 잠자기 상태가 되어 중단됨"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключено, когда Mac ушёл в сон"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 进入睡眠时已停止"
           }
         }
       }
@@ -2194,6 +2260,28 @@
         }
       }
     },
+    "When you put it to sleep or close the lid, Keep Awake is off after it wakes up." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac을 잠자기 상태로 전환하거나 덮개를 닫으면 깨어난 후 잠자기 방지가 꺼집니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если вы усыпили Mac или закрыли крышку, после пробуждения режим будет выключен."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当你让 Mac 睡眠或合上屏幕后，唤醒时保持唤醒将处于关闭状态。"
+          }
+        }
+      }
+    },
     "While %@ is running" : {
       "localizations" : {
         "ko" : {
@@ -2322,6 +2410,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac 过热，可以重新进入睡眠。"
+          }
+        }
+      }
+    },
+    "Your Mac went to sleep, so Keep Awake is off." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac이 잠자기 상태가 되어 잠자기 방지가 꺼졌습니다."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac уходил в сон, поэтому режим «Не засыпать» выключен."
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac 已进入睡眠，因此保持唤醒已关闭。"
           }
         }
       }

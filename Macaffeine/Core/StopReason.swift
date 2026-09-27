@@ -6,5 +6,6 @@ enum StopReason: Equatable {
     case lowPowerMode
     case overheating
     case screenLocked
+    case systemSlept
     case assertionFailed
 }

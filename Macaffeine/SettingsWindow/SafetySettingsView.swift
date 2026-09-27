@@ -28,13 +28,21 @@ struct SafetySettingsView: View {
             }
 
             Section {
+                Toggle(isOn: $settings.stopAfterSleep) {
+                    Text("Stop after your Mac sleeps")
+                    Text("When you put it to sleep or close the lid, Keep Awake is off after it wakes up.")
+                }
                 Toggle(isOn: $settings.stopOnScreenLock) {
                     Text("Stop when you lock your screen")
-                    Text("Also when it locks by itself after the display turns off. Command line and Shortcuts requests keep running.")
+                    Text("Also when it locks by itself after the display turns off.")
                 }
             } footer: {
-                Text("Closing the lid still puts your Mac to sleep unless it's connected to power and an external display. That's how macOS works, Macaffeine doesn't change it.")
-                    .foregroundStyle(.secondary)
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Commands kept awake with `macaffeine run` or `hold` keep running in both cases.")
+
+                    Text("Closing the lid still puts your Mac to sleep unless it's connected to power and an external display. That's how macOS works, Macaffeine doesn't change it.")
+                }
+                .foregroundStyle(.secondary)
             }
         }
         .formStyle(.grouped)

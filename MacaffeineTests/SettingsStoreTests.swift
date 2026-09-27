@@ -139,4 +139,12 @@ struct SettingsStoreTests {
 
         #expect(SettingsStore(defaults: defaults).hotKey == .default)
     }
+
+    @Test func stopAfterSleepIsOnByDefault() {
+        #expect(SettingsStore(defaults: defaults).stopAfterSleep)
+
+        SettingsStore(defaults: defaults).stopAfterSleep = false
+
+        #expect(!SettingsStore(defaults: defaults).stopAfterSleep)
+    }
 }

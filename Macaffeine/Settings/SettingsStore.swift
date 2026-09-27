@@ -13,6 +13,7 @@ final class SettingsStore: ObservableObject {
         static let notifyOnAutoStop = "notifyOnAutoStop"
         static let stopOnScreenLock = "stopOnScreenLock"
         static let showsCountdown = "showsCountdown"
+        static let stopAfterSleep = "stopAfterSleep"
         static let hotKeyCode = "hotKeyCode"
         static let hotKeyModifiers = "hotKeyModifiers"
         static let hotKeyDisabled = "hotKeyDisabled"
@@ -58,6 +59,10 @@ final class SettingsStore: ObservableObject {
         didSet { defaults.set(stopOnScreenLock, forKey: Key.stopOnScreenLock) }
     }
 
+    @Published var stopAfterSleep: Bool {
+        didSet { defaults.set(stopAfterSleep, forKey: Key.stopAfterSleep) }
+    }
+
     @Published var showsCountdown: Bool {
         didSet { defaults.set(showsCountdown, forKey: Key.showsCountdown) }
     }
@@ -93,6 +98,7 @@ final class SettingsStore: ObservableObject {
         notifyOnAutoStop = defaults.bool(forKey: Key.notifyOnAutoStop)
         stopOnScreenLock = defaults.bool(forKey: Key.stopOnScreenLock)
         showsCountdown = defaults.bool(forKey: Key.showsCountdown)
+        stopAfterSleep = defaults.object(forKey: Key.stopAfterSleep) as? Bool ?? true
         hotKey = Self.loadHotKey(from: defaults)
     }
 
