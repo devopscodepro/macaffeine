@@ -51,6 +51,31 @@ enum SleepBlockers {
         if let app = NSRunningApplication(processIdentifier: pid), let name = app.localizedName {
             return name
         }
+        return commandName(pid) ?? executableName(pid)
+    }
+
+    // argv[0] is what people typed: "claude" rather than its versioned binary "2.1.283"
+    private static func commandName(_ pid: pid_t) -> String? {
+        var mib = [CTL_KERN, KERN_PROCARGS2, pid]
+        var size = 0
+        guard sysctl(&mib, 3, nil, &size, nil, 0) == 0, size > MemoryLayout<Int32>.size else { return nil }
+        var buffer = [UInt8](repeating: 0, count: size)
+        guard sysctl(&mib, 3, &buffer, &size, nil, 0) == 0 else { return nil }
+
+        // layout: argc, executable path, padding zeros, argv[0]
+        var start = MemoryLayout<Int32>.size
+        while start < size, buffer[start] != 0 { start += 1 }
+        while start < size, buffer[start] == 0 { start += 1 }
+        var end = start
+        while end < size, buffer[end] != 0 { end += 1 }
+        guard end > start else { return nil }
+
+        let argv0 = String(decoding: buffer[start..<end], as: UTF8.self)
+        let name = (argv0 as NSString).lastPathComponent.trimmingCharacters(in: CharacterSet(charactersIn: "-"))
+        return name.isEmpty ? nil : name
+    }
+
+    private static func executableName(_ pid: pid_t) -> String? {
         var buffer = [UInt8](repeating: 0, count: 256)
         let length = proc_name(pid, &buffer, UInt32(buffer.count))
         guard length > 0 else { return nil }
