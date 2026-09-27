@@ -21,6 +21,7 @@ jobs:
         run: |
           sh -n Macaffeine/Resources/macaffeine
           sh -n scripts/release.sh
+          sh -n scripts/make-dmg.sh
 
       - name: Test
         run: xcodebuild -project Macaffeine.xcodeproj -scheme Macaffeine -derivedDataPath build/DerivedData test

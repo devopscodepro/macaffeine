@@ -1,5 +1,5 @@
 #!/bin/sh
-# Builds a signed, notarized Macaffeine.app and packs it for a GitHub release.
+# Builds a signed, notarized Macaffeine.app and packs it as a disk image and a zip for a GitHub release.
 #
 #   scripts/release.sh            sign with Developer ID and notarize
 #   scripts/release.sh --dry-run  ad-hoc signed build, no notarization (checks the pipeline)
@@ -30,6 +30,7 @@ BUILD=$(git rev-list --count HEAD)
 OUT=dist/$VERSION
 APP=$OUT/Macaffeine.app
 ZIP=$OUT/Macaffeine-$VERSION.zip
+DMG=$OUT/Macaffeine-$VERSION.dmg
 
 if [ $DRY_RUN = 0 ]; then
     [ -z "$(git status --porcelain)" ] || die "working tree is not clean"
@@ -69,7 +70,21 @@ fi
 
 step "Packing"
 ditto -c -k --keepParent "$APP" "$ZIP"
-(cd "$OUT" && shasum -a 256 "$(basename "$ZIP")" >"$(basename "$ZIP").sha256")
+
+# Finder lays out the disk image window, which CI machines can't do
+if [ -n "${CI:-}" ]; then
+    echo "CI: skipping the disk image"
+else
+    scripts/make-dmg.sh "$APP" "$DMG" >/dev/null
+    if [ $DRY_RUN = 0 ]; then
+        codesign --force --timestamp --sign "$IDENTITY" "$DMG"
+        xcrun notarytool submit "$DMG" --keychain-profile "$PROFILE" --wait | tee "$OUT/notarize-dmg.log"
+        grep -q "status: Accepted" "$OUT/notarize-dmg.log" || die "disk image notarization was not accepted, see $OUT/notarize-dmg.log"
+        xcrun stapler staple "$DMG"
+    fi
+fi
+
+(cd "$OUT" && shasum -a 256 Macaffeine-"$VERSION".* >SHA256SUMS)
 
 # release notes are the changelog section for this version
 awk -v version="$VERSION" '
@@ -81,4 +96,4 @@ awk -v version="$VERSION" '
 
 step "Done"
 ls -lh "$OUT"
-cat "$OUT/$(basename "$ZIP").sha256"
+cat "$OUT/SHA256SUMS"
