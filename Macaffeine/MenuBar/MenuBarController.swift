@@ -225,17 +225,8 @@ final class MenuBarController: NSObject, NSMenuDelegate {
     }
 
     @objc private func chooseEndTime() {
-        guard let date = EndTimePicker.run(initial: suggestedEndTime()) else { return }
+        guard let date = EndTimePicker.run(initial: EndTimePicker.suggestion(after: Date())) else { return }
         manager.activate(until: date)
-    }
-
-    // an hour from now, rounded up to a quarter
-    private func suggestedEndTime() -> Date {
-        let calendar = Calendar.current
-        let inAnHour = Date().addingTimeInterval(3600)
-        let minute = calendar.component(.minute, from: inAnHour)
-        let rounded = calendar.date(byAdding: .minute, value: (15 - minute % 15) % 15, to: inAnHour) ?? inAnHour
-        return calendar.date(bySetting: .second, value: 0, of: rounded) ?? rounded
     }
 
     @objc private func toggleDisplay() {
