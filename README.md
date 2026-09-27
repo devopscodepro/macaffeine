@@ -38,9 +38,11 @@ Built for those moments when you start a long build, deploy, AI agent, or remote
 
 ## Install
 
-1. Download the latest `Macaffeine-x.y.z.zip` from [Releases](https://github.com/devopscodepro/macaffeine/releases/latest).
-2. Unzip it and move **Macaffeine.app** to **Applications**.
-3. Open it. A cup appears in the menu bar — that's it.
+1. Download `Macaffeine-x.y.z.dmg` from [Releases](https://github.com/devopscodepro/macaffeine/releases/latest).
+2. Open it and drag the cup into **Applications**.
+3. Launch Macaffeine. A cup appears in the menu bar — that's it.
+
+A `.zip` is there too if you prefer it.
 
 Builds are signed with a Developer ID and notarized by Apple. Requires macOS 13 Ventura or later, runs natively on Apple silicon and Intel.
 
