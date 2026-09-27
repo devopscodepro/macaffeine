@@ -19,7 +19,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="docs/images/menu-dark.png">
-    <img src="docs/images/menu-light.png" width="391" alt="Macaffeine menu: keeping your Mac awake, 2h remaining">
+    <img src="docs/images/menu-light.png" width="401" alt="Macaffeine menu: keeping your Mac awake, 2h remaining">
   </picture>
 </p>
 
