@@ -37,4 +37,24 @@ struct SleepBlockersTests {
     @Test func skipsUnknownProcesses() {
         #expect(parse([99: [["AssertType": "PreventSystemSleep"]]]).isEmpty)
     }
+
+    @Test func usesEarliestStartOfBlockingAssertions() {
+        let early = Date(timeIntervalSinceReferenceDate: 1000)
+        let late = Date(timeIntervalSinceReferenceDate: 2000)
+        let blockers = parse([
+            20: [
+                ["AssertType": "PreventUserIdleDisplaySleep", "AssertName": "Video", "AssertStartWhen": late],
+                ["AssertType": "PreventUserIdleSystemSleep", "AssertName": "Audio", "AssertStartWhen": early],
+                ["AssertType": "UserIsActive", "AssertStartWhen": Date(timeIntervalSinceReferenceDate: 0)],
+            ],
+        ])
+
+        #expect(blockers.first?.since == early)
+    }
+
+    @Test func missingStartIsFine() {
+        let blockers = parse([20: [["AssertType": "PreventSystemSleep", "AssertName": "Backup"]]])
+
+        #expect(blockers.first?.since == nil)
+    }
 }

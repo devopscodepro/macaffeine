@@ -6,6 +6,7 @@ struct SleepBlocker: Equatable {
     let process: String
     let parent: String?
     let reason: String
+    var since: Date?
 }
 
 enum SleepBlockers {
@@ -41,7 +42,8 @@ enum SleepBlockers {
                 pid: pid,
                 process: name,
                 parent: parentName(pid),
-                reason: first["AssertName"] as? String ?? ""
+                reason: first["AssertName"] as? String ?? "",
+                since: blocking.compactMap { $0["AssertStartWhen"] as? Date }.min()
             ))
         }
         return blockers.sorted { ($0.process.lowercased(), $0.pid) < ($1.process.lowercased(), $1.pid) }

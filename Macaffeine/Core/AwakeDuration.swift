@@ -46,6 +46,13 @@ enum DurationTitle {
     }
 }
 
+enum ElapsedTime {
+    // whole minutes that already passed, never below one
+    static func format(_ interval: TimeInterval) -> String {
+        RemainingTime.format(TimeInterval(max(1, Int(interval) / 60) * 60))
+    }
+}
+
 enum RemainingTime {
     // rounds up so the menu never shows 0m while still active
     static func format(_ interval: TimeInterval) -> String {

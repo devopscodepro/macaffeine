@@ -195,14 +195,17 @@ final class MenuBarController: NSObject, NSMenuDelegate {
             let item = NSMenuItem()
             let name = blocker.parent.map { "\(blocker.process) (\($0))" } ?? blocker.process
             let title = NSMutableAttributedString(string: name)
-            if !blocker.reason.isEmpty {
+            let details = [blocker.reason, blocker.since.map { ElapsedTime.format(Date().timeIntervalSince($0)) } ?? ""]
+                .filter { !$0.isEmpty }
+                .joined(separator: " · ")
+            if !details.isEmpty {
                 title.append(NSAttributedString(
-                    string: "  \(blocker.reason)",
+                    string: "  \(details)",
                     attributes: [.foregroundColor: NSColor.secondaryLabelColor, .font: NSFont.menuFont(ofSize: NSFont.smallSystemFontSize)]
                 ))
             }
             item.attributedTitle = title
-            item.setAccessibilityLabel(blocker.reason.isEmpty ? name : "\(name), \(blocker.reason)")
+            item.setAccessibilityLabel(details.isEmpty ? name : "\(name), \(details)")
 
             if let app = NSRunningApplication(processIdentifier: blocker.pid) {
                 item.image = app.icon.map { icon in

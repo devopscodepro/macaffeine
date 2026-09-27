@@ -45,4 +45,16 @@ struct AwakeDurationTests {
     func formatsRemainingTime(interval: TimeInterval, expected: String) {
         #expect(RemainingTime.format(interval) == expected)
     }
+
+    @Test(arguments: [
+        (5.0, "1m"),
+        (65, "1m"),
+        (119, "1m"),
+        (120, "2m"),
+        (3599, "59m"),
+        (127_440, "35h 24m"),
+    ])
+    func formatsElapsedTimeRoundingDown(interval: TimeInterval, expected: String) {
+        #expect(ElapsedTime.format(interval) == expected)
+    }
 }
