@@ -3,6 +3,18 @@
   "strings" : {
     "%@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -10,6 +22,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@"
@@ -25,6 +43,18 @@
     },
     "%@ remaining · until %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "متبقٍ %1$@ · حتى %2$@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "noch %1$@ · bis %2$@"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -43,6 +73,12 @@
             "value" : "Осталось %1$@ · до %2$@"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เหลือ %1$@ · ถึง %2$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -53,6 +89,18 @@
     },
     "%lld h" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld س"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Std."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -65,6 +113,12 @@
             "value" : "%lld ч"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ชม."
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -75,6 +129,18 @@
     },
     "%lld min" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld د"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Min."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -85,6 +151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld мин"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld นาที"
           }
         },
         "zh-Hans" : {
@@ -98,6 +170,18 @@
     "%lldh" : {
       "comment" : "Compact remaining time, whole hours",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld س"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Std."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -108,6 +192,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld ч"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ชม."
           }
         },
         "zh-Hans" : {
@@ -121,6 +211,18 @@
     "%lldh %lldm" : {
       "comment" : "Compact remaining time, hours and minutes",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld س %2$lld د"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld Std. %2$lld Min."
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "new",
@@ -139,6 +241,12 @@
             "value" : "%1$lld ч %2$lld мин"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld ชม. %2$lld นาที"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -150,6 +258,18 @@
     "%lldm" : {
       "comment" : "Compact remaining time, minutes only",
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld د"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld Min."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -162,6 +282,12 @@
             "value" : "%lld мин"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld นาที"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -172,6 +298,18 @@
     },
     "About Macaffeine" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حول Macaffeine"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über Macaffeine"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -184,6 +322,12 @@
             "value" : "О программе Macaffeine"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เกี่ยวกับ Macaffeine"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -194,6 +338,18 @@
     },
     "Active for Duration" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المدة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dauer"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -206,6 +362,12 @@
             "value" : "Длительность"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ระยะเวลา"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -216,6 +378,18 @@
     },
     "Add" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إضافة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hinzufügen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -228,6 +402,12 @@
             "value" : "Добавить"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่ม"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -238,6 +418,18 @@
     },
     "Allow Mac to Sleep" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "السماح لـ Mac بالسكون"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ruhezustand erlauben"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -250,6 +442,12 @@
             "value" : "Разрешить Mac засыпать"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อนุญาตให้ Mac พัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -260,6 +458,18 @@
     },
     "Allow Macaffeine in System Settings → General → Login Items." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اسمح لـ Macaffeine في إعدادات النظام ← عام ← عناصر تسجيل الدخول."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erlaube Macaffeine in Systemeinstellungen → Allgemein → Anmeldeobjekte."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -272,6 +482,12 @@
             "value" : "Разрешите Macaffeine в Системных настройках → Основные → Объекты входа."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "อนุญาต Macaffeine ในการตั้งค่าระบบ → ทั่วไป → รายการเข้าสู่ระบบ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -282,6 +498,18 @@
     },
     "Also Keeping Your Mac Awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمنع سكون Mac أيضًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halten den Mac ebenfalls wach"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -294,6 +522,12 @@
             "value" : "Также не дают Mac уснуть"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รายการอื่นที่ไม่ให้ Mac พัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -304,6 +538,18 @@
     },
     "Also when it locks by itself after the display turns off." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وكذلك عندما تُقفل الشاشة تلقائيًا بعد إيقاف الشاشة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auch wenn er sich nach dem Ausschalten des Displays von selbst sperrt."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -316,6 +562,12 @@
             "value" : "В том числе когда экран блокируется сам после отключения дисплея."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รวมถึงเมื่อหน้าจอล็อกเองหลังจากจอภาพปิด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -326,6 +578,18 @@
     },
     "Battery is below %lld%%, your Mac can sleep again." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البطارية أقل من %lld%%، يمكن لـ Mac السكون مجددًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Akku liegt unter %lld %%, dein Mac darf wieder in den Ruhezustand."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -338,6 +602,12 @@
             "value" : "Заряд ниже %lld%%, Mac снова может засыпать."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แบตเตอรี่ต่ำกว่า %lld%% Mac จึงพักได้อีกครั้ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -348,6 +618,18 @@
     },
     "Battery is below %lld%%. Plug in to keep awake." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "البطارية أقل من %lld%%. صِل الشاحن للمتابعة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Akku liegt unter %lld %%. Schließe das Netzteil an, um weiterzumachen."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -360,6 +642,12 @@
             "value" : "Заряд ниже %lld%%. Подключите питание, чтобы продолжить."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แบตเตอรี่ต่ำกว่า %lld%% เสียบสายชาร์จเพื่อใช้งานต่อ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -370,6 +658,18 @@
     },
     "Battery level" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "مستوى البطارية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Akkustand"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -382,6 +682,12 @@
             "value" : "Уровень заряда"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ระดับแบตเตอรี่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -392,6 +698,18 @@
     },
     "Below %lld%%" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أقل من %lld%%"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unter %lld %%"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -404,6 +722,12 @@
             "value" : "Ниже %lld%%"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ต่ำกว่า %lld%%"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -414,6 +738,18 @@
     },
     "Cancel" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إلغاء"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -426,6 +762,12 @@
             "value" : "Отменить"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยกเลิก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -436,6 +778,18 @@
     },
     "Choose a duration or press %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر مدة أو اضغط %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle eine Dauer oder drücke %@"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -448,6 +802,12 @@
             "value" : "Выберите длительность или нажмите %@"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกระยะเวลาหรือกด %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -458,6 +818,18 @@
     },
     "Choose a duration to keep it awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اختر مدة لإبقائه مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wähle eine Dauer, um ihn wach zu halten"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -470,6 +842,12 @@
             "value" : "Выберите длительность, чтобы Mac не засыпал"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกระยะเวลาเพื่อไม่ให้ Mac พัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -480,6 +858,18 @@
     },
     "Click to record a new shortcut" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انقر لتسجيل اختصار جديد"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klicken, um einen neuen Kurzbefehl aufzunehmen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -492,6 +882,12 @@
             "value" : "Нажмите, чтобы задать новое сочетание"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คลิกเพื่อบันทึกคำสั่งลัดใหม่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -502,6 +898,18 @@
     },
     "Close" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إغلاق"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schließen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -514,6 +922,12 @@
             "value" : "Закрыть"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -524,6 +938,18 @@
     },
     "Closing the lid still puts your Mac to sleep unless it's connected to power and an external display. That's how macOS works, Macaffeine doesn't change it." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إغلاق الغطاء يُدخل Mac في وضع السكون ما لم يكن متصلًا بالطاقة وبشاشة خارجية. هكذا يعمل macOS، ولا يغيّر Macaffeine ذلك."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Zuklappen geht dein Mac trotzdem in den Ruhezustand, außer er ist mit Strom und einem externen Display verbunden. So funktioniert macOS, Macaffeine ändert daran nichts."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -536,6 +962,12 @@
             "value" : "Если закрыть крышку, Mac всё равно уснёт, если он не подключён к питанию и внешнему монитору. Так устроена macOS, и Macaffeine это не меняет."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การปิดฝายังคงทำให้ Mac พัก เว้นแต่เชื่อมต่อกับไฟและจอภาพภายนอก นี่คือการทำงานของ macOS และ Macaffeine ไม่เปลี่ยนแปลงสิ่งนี้"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -546,6 +978,18 @@
     },
     "Command Line Tool" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أداة سطر الأوامر"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Befehlszeilenwerkzeug"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -558,6 +1002,12 @@
             "value" : "Командная строка"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เครื่องมือบรรทัดคำสั่ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -568,6 +1018,18 @@
     },
     "Commands kept awake with `macaffeine run` or `hold` keep running in both cases." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأوامر التي تعمل عبر `macaffeine run` أو `hold` تستمر في الحالتين."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Befehle, die mit `macaffeine run` oder `hold` wach gehalten werden, laufen in beiden Fällen weiter."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -580,6 +1042,12 @@
             "value" : "Команды, запущенные через `macaffeine run` или `hold`, в обоих случаях продолжают работать."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คำสั่งที่ใช้ `macaffeine run` หรือ `hold` จะทำงานต่อในทั้งสองกรณี"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -590,6 +1058,18 @@
     },
     "Copied" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تم النسخ"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopiert"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -602,6 +1082,12 @@
             "value" : "Скопировано"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คัดลอกแล้ว"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -612,6 +1098,18 @@
     },
     "Copy" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نسخ"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopieren"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -624,6 +1122,12 @@
             "value" : "Скопировать"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คัดลอก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -634,6 +1138,18 @@
     },
     "Couldn't keep your Mac awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تعذّر إبقاء Mac مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Mac konnte nicht wach gehalten werden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -646,6 +1162,12 @@
             "value" : "Не удалось запретить сон"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่สามารถกัน Mac ไม่ให้พักได้"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -656,6 +1178,18 @@
     },
     "Durations" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "المدد"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeiten"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -668,6 +1202,12 @@
             "value" : "Длительности"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ระยะเวลา"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -678,6 +1218,18 @@
     },
     "For %lld tasks" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لـ %lld مهام"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Für %lld Aufgaben"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -690,6 +1242,12 @@
             "value" : "Задач: %lld"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "งาน %lld รายการ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -700,6 +1258,18 @@
     },
     "General" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عام"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allgemein"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -712,6 +1282,12 @@
             "value" : "Основные"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทั่วไป"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -722,6 +1298,18 @@
     },
     "Hide Macaffeine" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إخفاء Macaffeine"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine ausblenden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -734,6 +1322,12 @@
             "value" : "Скрыть Macaffeine"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ซ่อน Macaffeine"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -744,6 +1338,18 @@
     },
     "Hours" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساعات"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stunden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -756,6 +1362,12 @@
             "value" : "Часы"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชั่วโมง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -766,6 +1378,18 @@
     },
     "If the time has already passed today, Macaffeine keeps your Mac awake until that time tomorrow." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إذا كان هذا الوقت قد مضى اليوم، فسيُبقي Macaffeine جهاز Mac مستيقظًا حتى هذا الوقت غدًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ist die Uhrzeit heute schon vorbei, hält Macaffeine deinen Mac bis morgen zu dieser Zeit wach."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -778,6 +1402,12 @@
             "value" : "Если это время сегодня уже прошло, Macaffeine не даст Mac уснуть до этого времени завтра."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หากเวลานี้ของวันนี้ผ่านไปแล้ว Macaffeine จะไม่ให้ Mac พักจนถึงเวลานี้ของวันพรุ่งนี้"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -788,6 +1418,18 @@
     },
     "Indefinite" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بلا حد"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unbegrenzt"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -800,6 +1442,12 @@
             "value" : "Без ограничения"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่จำกัดเวลา"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -810,6 +1458,18 @@
     },
     "Indefinite is always available." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "خيار «بلا حد» متاح دائمًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "„Unbegrenzt“ ist immer verfügbar."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -822,6 +1482,12 @@
             "value" : "«Без ограничения» доступно всегда."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“ไม่จำกัดเวลา” มีให้เลือกเสมอ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -832,6 +1498,18 @@
     },
     "Is Mac Kept Awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "هل Mac مستيقظ"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wird der Mac wach gehalten"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -844,6 +1522,12 @@
             "value" : "Mac сейчас не засыпает?"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac ถูกกันไม่ให้พักอยู่หรือไม่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -854,6 +1538,18 @@
     },
     "Keep Awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إبقاء مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wach halten"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -866,6 +1562,12 @@
             "value" : "Не засыпать"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กันพัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -876,6 +1578,18 @@
     },
     "Keep Awake finished" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتهى إبقاء Mac مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wach halten beendet"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -888,6 +1602,12 @@
             "value" : "Время вышло"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กันพักสิ้นสุดแล้ว"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -898,6 +1618,18 @@
     },
     "Keep Awake stopped" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "توقف إبقاء Mac مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wach halten gestoppt"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -910,6 +1642,12 @@
             "value" : "«Не засыпать» выключено"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กันพักหยุดแล้ว"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -920,6 +1658,18 @@
     },
     "Keep awake until" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إبقاء مستيقظًا حتى"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wach halten bis"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -932,6 +1682,12 @@
             "value" : "Не засыпать до"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กันพักถึงเวลา"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -942,6 +1698,18 @@
     },
     "Keep display on" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إبقاء الشاشة قيد التشغيل"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display eingeschaltet lassen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -952,6 +1720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не гасить экран"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดจอภาพค้างไว้"
           }
         },
         "zh-Hans" : {
@@ -964,6 +1738,18 @@
     },
     "Keep Display On" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إبقاء الشاشة قيد التشغيل"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Display eingeschaltet lassen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -976,6 +1762,12 @@
             "value" : "Не гасить экран"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดจอภาพค้างไว้"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -986,6 +1778,18 @@
     },
     "Keep Mac Awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إبقاء Mac مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac wach halten"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -998,6 +1802,12 @@
             "value" : "Не давать Mac уснуть"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กัน Mac ไม่ให้พัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1008,6 +1818,18 @@
     },
     "Keep Mac awake for ${minutes} minutes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إبقاء Mac مستيقظًا لمدة ${minutes} دقيقة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac ${minutes} Minuten wach halten"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1020,6 +1842,12 @@
             "value" : "Не давать Mac уснуть ${minutes} мин"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กัน Mac ไม่ให้พัก ${minutes} นาที"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1030,6 +1858,18 @@
     },
     "Keep your Mac awake while a command runs, for example `macaffeine run -- make`. To install it, run this in Terminal:" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أبقِ Mac مستيقظًا أثناء تشغيل أمر، مثل `macaffeine run -- make`. للتثبيت، شغّل ما يلي في Terminal:"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hält deinen Mac wach, solange ein Befehl läuft, zum Beispiel `macaffeine run -- make`. Zum Installieren im Terminal ausführen:"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1042,6 +1882,12 @@
             "value" : "Mac не уснёт, пока выполняется команда, например `macaffeine run -- make`. Чтобы установить утилиту, выполните в Терминале:"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กัน Mac ไม่ให้พักขณะที่คำสั่งทำงาน เช่น `macaffeine run -- make` หากต้องการติดตั้ง ให้เรียกใช้สิ่งนี้ในเทอร์มินัล:"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1052,6 +1898,18 @@
     },
     "Keeping your Mac awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُبقي Mac مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Mac wird wach gehalten"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1064,6 +1922,12 @@
             "value" : "Mac не уснёт"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กัน Mac ไม่ให้พักอยู่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1074,6 +1938,18 @@
     },
     "Keeps your Mac awake for a number of minutes, or until you turn it off." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يُبقي Mac مستيقظًا لعدد من الدقائق أو حتى تُوقفه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hält deinen Mac für eine Anzahl Minuten wach oder bis du es ausschaltest."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1086,6 +1962,12 @@
             "value" : "Не даёт Mac уснуть заданное число минут или пока вы не выключите режим."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กัน Mac ไม่ให้พักตามจำนวนนาที หรือจนกว่าคุณจะปิด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1096,6 +1978,18 @@
     },
     "Launch at Login" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الفتح عند تسجيل الدخول"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei der Anmeldung öffnen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1108,6 +2002,12 @@
             "value" : "Открывать при входе"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดเมื่อเข้าสู่ระบบ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1118,6 +2018,18 @@
     },
     "Leave empty to keep your Mac awake until you turn it off." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اتركه فارغًا لإبقاء Mac مستيقظًا حتى تُوقفه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leer lassen, um deinen Mac wach zu halten, bis du es ausschaltest."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1130,6 +2042,12 @@
             "value" : "Оставьте пустым, чтобы Mac не засыпал, пока вы не выключите режим."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เว้นว่างไว้เพื่อกัน Mac ไม่ให้พักจนกว่าคุณจะปิด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1140,6 +2058,18 @@
     },
     "Let it cool down and try again." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اتركه يبرد ثم حاول مجددًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lass ihn abkühlen und versuche es erneut."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1152,6 +2082,12 @@
             "value" : "Дайте ему остыть и попробуйте снова."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รอให้เย็นลงแล้วลองอีกครั้ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1162,6 +2098,18 @@
     },
     "Low Power Mode is on, your Mac can sleep again." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وضع الطاقة المنخفضة مفعّل، يمكن لـ Mac السكون مجددًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Stromsparmodus ist an, dein Mac darf wieder in den Ruhezustand."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1174,6 +2122,12 @@
             "value" : "Включено энергосбережение, Mac снова может засыпать."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมดพลังงานต่ำเปิดอยู่ Mac จึงพักได้อีกครั้ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1184,6 +2138,18 @@
     },
     "Low Power Mode means you want to save energy." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "وضع الطاقة المنخفضة يعني أنك تريد توفير الطاقة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Stromsparmodus bedeutet, dass du Energie sparen willst."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1196,6 +2162,12 @@
             "value" : "Раз включено энергосбережение, значит, вы бережёте заряд."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โหมดพลังงานต่ำหมายความว่าคุณต้องการประหยัดพลังงาน"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1206,6 +2178,18 @@
     },
     "Macaffeine" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1213,6 +2197,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Macaffeine"
@@ -1228,6 +2218,18 @@
     },
     "Macaffeine is off" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine متوقف"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine ist aus"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1240,6 +2242,12 @@
             "value" : "Macaffeine выключен"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine ปิดอยู่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1250,6 +2258,18 @@
     },
     "Macaffeine isn't running yet. Try again in a moment." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine لا يعمل بعد. حاول مجددًا بعد لحظات."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine läuft noch nicht. Versuche es gleich noch einmal."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1262,6 +2282,12 @@
             "value" : "Macaffeine ещё не запущен. Попробуйте через пару секунд."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine ยังไม่ได้ทำงาน ลองอีกครั้งในอีกสักครู่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1272,6 +2298,18 @@
     },
     "Macaffeine, keeping your Mac awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine، يُبقي Mac مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine, hält deinen Mac wach"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1284,6 +2322,12 @@
             "value" : "Macaffeine, Mac не уснёт"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine กัน Mac ไม่ให้พักอยู่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1294,6 +2338,18 @@
     },
     "Macaffeine, off" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine، متوقف"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine, aus"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1306,6 +2362,12 @@
             "value" : "Macaffeine, выключен"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine ปิดอยู่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1316,6 +2378,18 @@
     },
     "macOS didn't accept this shortcut. Pick a different one." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لم يقبل macOS هذا الاختصار. اختر اختصارًا آخر."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS hat diesen Kurzbefehl nicht akzeptiert. Wähle einen anderen."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1328,6 +2402,12 @@
             "value" : "macOS не приняла это сочетание. Выберите другое."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS ไม่ยอมรับคำสั่งลัดนี้ โปรดเลือกคำสั่งลัดอื่น"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1338,6 +2418,18 @@
     },
     "macOS refused the request. Try again." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "رفض macOS الطلب. حاول مجددًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS hat die Anfrage abgelehnt. Versuche es erneut."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1350,6 +2442,12 @@
             "value" : "macOS отклонила запрос. Попробуйте снова."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "macOS ปฏิเสธคำขอ ลองอีกครั้ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1360,6 +2458,18 @@
     },
     "Made by Aleksei Popov" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "من تطوير Aleksei Popov"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Von Aleksei Popov"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1372,6 +2482,12 @@
             "value" : "Автор — Алексей Попов"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สร้างโดย Aleksei Popov"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1382,6 +2498,18 @@
     },
     "Minutes" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دقائق"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minuten"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1394,6 +2522,12 @@
             "value" : "Минуты"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "นาที"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1404,6 +2538,18 @@
     },
     "Next to the cup, while a timer is running." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بجانب الكوب أثناء عمل المؤقت."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neben der Tasse, während ein Timer läuft."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1416,6 +2562,12 @@
             "value" : "Рядом с чашкой, пока идёт таймер."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้างถ้วยกาแฟ ขณะที่ตัวจับเวลาทำงาน"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1426,6 +2578,18 @@
     },
     "None" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لا شيء"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keiner"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1438,6 +2602,12 @@
             "value" : "Нет"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่มี"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1448,6 +2618,18 @@
     },
     "Notifications are turned off for Macaffeine." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإشعارات متوقفة لـ Macaffeine."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mitteilungen für Macaffeine sind ausgeschaltet."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1460,6 +2642,12 @@
             "value" : "Уведомления для Macaffeine выключены."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การแจ้งเตือนของ Macaffeine ปิดอยู่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1470,6 +2658,18 @@
     },
     "Notify when Keep Awake stops on its own" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإشعار عندما يتوقف الإبقاء مستيقظًا تلقائيًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Benachrichtigen, wenn Wach halten von selbst endet"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1482,6 +2682,12 @@
             "value" : "Сообщать, когда режим выключается сам"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แจ้งเตือนเมื่อกันพักหยุดเอง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1492,6 +2698,18 @@
     },
     "Only while running on battery." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فقط عند العمل بالبطارية."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nur im Akkubetrieb."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1504,6 +2722,12 @@
             "value" : "Только при работе от аккумулятора."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เฉพาะเมื่อใช้แบตเตอรี่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1514,6 +2738,18 @@
     },
     "Open System Settings" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "فتح إعدادات النظام"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Systemeinstellungen öffnen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1526,6 +2762,12 @@
             "value" : "Открыть Системные настройки"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดการตั้งค่าระบบ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1536,6 +2778,18 @@
     },
     "Other apps are keeping your Mac awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تطبيقات أخرى تُبقي Mac مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Andere Apps halten deinen Mac wach"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1548,6 +2802,12 @@
             "value" : "Mac не дают уснуть другие приложения"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แอปอื่นกัน Mac ไม่ให้พักอยู่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1558,6 +2818,18 @@
     },
     "Press Esc to cancel, Delete to turn the shortcut off" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esc للإلغاء، Delete لإيقاف الاختصار"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esc zum Abbrechen, Löschen zum Ausschalten des Kurzbefehls"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1570,6 +2842,12 @@
             "value" : "Esc — отмена, Delete — отключить сочетание"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กด Esc เพื่อยกเลิก กด Delete เพื่อปิดคำสั่งลัด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1580,6 +2858,18 @@
     },
     "Quit Macaffeine" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إنهاء Macaffeine"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine beenden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1592,6 +2882,12 @@
             "value" : "Завершить Macaffeine"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ออกจาก Macaffeine"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1602,6 +2898,18 @@
     },
     "Remove" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إزالة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entfernen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1614,6 +2922,12 @@
             "value" : "Удалить"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เอาออก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1624,6 +2938,18 @@
     },
     "Remove %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إزالة %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ entfernen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1636,6 +2962,12 @@
             "value" : "Удалить %@"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เอา %@ ออก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1646,6 +2978,18 @@
     },
     "Requested by another app" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "بطلب من تطبيق آخر"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Von einer anderen App angefordert"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1658,6 +3002,12 @@
             "value" : "По запросу другого приложения"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แอปอื่นร้องขอ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1668,6 +3018,18 @@
     },
     "Reset shortcut" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إعادة تعيين الاختصار"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbefehl zurücksetzen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1680,6 +3042,12 @@
             "value" : "Сбросить сочетание"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รีเซ็ตคำสั่งลัด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1690,6 +3058,18 @@
     },
     "Reset to %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "إعادة التعيين إلى %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Auf %@ zurücksetzen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1702,6 +3082,12 @@
             "value" : "Вернуть %@"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รีเซ็ตเป็น %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1712,6 +3098,18 @@
     },
     "Restore Defaults" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "استعادة الإعدادات الافتراضية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standard wiederherstellen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1724,6 +3122,12 @@
             "value" : "Вернуть стандартные"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คืนค่าเริ่มต้น"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1734,6 +3138,18 @@
     },
     "Safety" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأمان"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sicherheit"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1746,6 +3162,12 @@
             "value" : "Защита"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ความปลอดภัย"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1756,6 +3178,18 @@
     },
     "Settings…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإعدادات…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen …"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1768,6 +3202,12 @@
             "value" : "Настройки…"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การตั้งค่า…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1778,6 +3218,18 @@
     },
     "Show remaining time in the menu bar" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عرض الوقت المتبقي في شريط القائمة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restzeit in der Menüleiste anzeigen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1790,6 +3242,12 @@
             "value" : "Показывать оставшееся время в строке меню"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงเวลาที่เหลือในแถบเมนู"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1800,6 +3258,18 @@
     },
     "Stop after your Mac sleeps" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيقاف بعد سكون Mac"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nach dem Ruhezustand beenden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1812,6 +3282,12 @@
             "value" : "Выключать после сна Mac"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดหลังจาก Mac พัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1822,6 +3298,18 @@
     },
     "Stop in Low Power Mode" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيقاف في وضع الطاقة المنخفضة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Im Stromsparmodus beenden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1834,6 +3322,12 @@
             "value" : "Выключать в режиме энергосбережения"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดในโหมดพลังงานต่ำ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1844,6 +3338,18 @@
     },
     "Stop when battery is low" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيقاف عند انخفاض البطارية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei niedrigem Akkustand beenden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1856,6 +3362,12 @@
             "value" : "Выключать при низком заряде"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดเมื่อแบตเตอรี่ต่ำ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1866,6 +3378,18 @@
     },
     "Stop when you lock your screen" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيقاف عند قفل الشاشة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Sperren des Bildschirms beenden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1878,6 +3402,12 @@
             "value" : "Выключать при блокировке экрана"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดเมื่อคุณล็อกหน้าจอ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1888,6 +3418,18 @@
     },
     "Stop when your Mac overheats" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإيقاف عند ارتفاع حرارة Mac"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bei Überhitzung beenden"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1900,6 +3442,12 @@
             "value" : "Выключать при перегреве"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดเมื่อ Mac ร้อนเกินไป"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1910,6 +3458,18 @@
     },
     "Stopped by Low Power Mode" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أُوقف بسبب وضع الطاقة المنخفضة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vom Stromsparmodus beendet"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1922,6 +3482,12 @@
             "value" : "Выключено энергосбережением"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดเพราะโหมดพลังงานต่ำ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1932,6 +3498,18 @@
     },
     "Stopped to save battery" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أُوقف لتوفير البطارية"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beendet, um den Akku zu schonen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1944,6 +3522,12 @@
             "value" : "Выключено, чтобы сберечь заряд"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดเพื่อประหยัดแบตเตอรี่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1954,6 +3538,18 @@
     },
     "Stopped when the screen was locked" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أُوقف عند قفل الشاشة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beim Sperren des Bildschirms beendet"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1966,6 +3562,12 @@
             "value" : "Выключено при блокировке экрана"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดเมื่อหน้าจอถูกล็อก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1976,6 +3578,18 @@
     },
     "Stopped when your Mac went to sleep" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أُوقف عندما دخل Mac في وضع السكون"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beendet, als dein Mac in den Ruhezustand ging"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1988,6 +3602,12 @@
             "value" : "Выключено, когда Mac ушёл в сон"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดเมื่อ Mac เข้าสู่โหมดพัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1998,6 +3618,18 @@
     },
     "Stopped, your Mac is too hot" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أُوقف، حرارة Mac مرتفعة جدًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beendet, dein Mac ist zu heiß"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2010,6 +3642,12 @@
             "value" : "Выключено: Mac перегрелся"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หยุดแล้ว Mac ร้อนเกินไป"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2020,6 +3658,18 @@
     },
     "Tells whether Macaffeine is keeping your Mac awake right now." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يخبرك ما إذا كان Macaffeine يُبقي Mac مستيقظًا الآن."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeigt, ob Macaffeine deinen Mac gerade wach hält."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2032,6 +3682,12 @@
             "value" : "Сообщает, не даёт ли Macaffeine сейчас Mac уснуть."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บอกว่า Macaffeine กำลังกัน Mac ไม่ให้พักอยู่หรือไม่"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2042,6 +3698,18 @@
     },
     "The screen won't dim or turn off while your Mac is kept awake." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لن تخفت الشاشة أو تنطفئ أثناء إبقاء Mac مستيقظًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Bildschirm wird nicht abgedunkelt oder ausgeschaltet, solange dein Mac wach gehalten wird."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2054,6 +3722,12 @@
             "value" : "Экран не будет тускнеть и гаснуть, пока Mac не засыпает."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หน้าจอจะไม่หรี่หรือปิดขณะที่กัน Mac ไม่ให้พัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2064,6 +3738,18 @@
     },
     "Timer finished at %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "انتهى المؤقت عند %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timer um %@ abgelaufen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2076,6 +3762,12 @@
             "value" : "Таймер закончился в %@"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวจับเวลาสิ้นสุดเมื่อ %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2086,6 +3778,18 @@
     },
     "Toggle Keep Awake" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "تبديل الإبقاء مستيقظًا"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wach halten ein/aus"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2098,6 +3802,12 @@
             "value" : "Переключить «Не засыпать»"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิด/ปิดกันพัก"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2108,6 +3818,18 @@
     },
     "Turn off Low Power Mode to keep awake." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أوقف وضع الطاقة المنخفضة للمتابعة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schalte den Stromsparmodus aus, um weiterzumachen."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2120,6 +3842,12 @@
             "value" : "Выключите энергосбережение, чтобы продолжить."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดโหมดพลังงานต่ำเพื่อใช้งานต่อ"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2130,6 +3858,18 @@
     },
     "Turns Keep Awake on with the selected duration, or off." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يشغّل الإبقاء مستيقظًا بالمدة المحددة أو يوقفه."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schaltet Wach halten mit der gewählten Dauer ein oder aus."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2142,6 +3882,12 @@
             "value" : "Включает «Не засыпать» на выбранное время или выключает."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดกันพักตามระยะเวลาที่เลือก หรือปิด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2152,6 +3898,18 @@
     },
     "Turns off Keep Awake, including requests from the command line." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يوقف الإبقاء مستيقظًا، بما في ذلك طلبات سطر الأوامر."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schaltet Wach halten aus, auch Anfragen aus der Befehlszeile."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2164,6 +3922,12 @@
             "value" : "Выключает «Не засыпать», включая запросы из командной строки."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิดกันพัก รวมถึงคำขอจากบรรทัดคำสั่ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2174,6 +3938,18 @@
     },
     "Type shortcut…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "اضغط الاختصار…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurzbefehl drücken …"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2186,6 +3962,12 @@
             "value" : "Нажмите сочетание…"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กดคำสั่งลัด…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2196,6 +3978,18 @@
     },
     "Until %@…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حتى %@…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bis %@ …"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2208,6 +4002,12 @@
             "value" : "До %@…"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถึง %@…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2218,6 +4018,18 @@
     },
     "Until you turn it off" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حتى تُوقفه"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bis du es ausschaltest"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2230,6 +4042,12 @@
             "value" : "Пока вы не выключите"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จนกว่าคุณจะปิด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2240,6 +4058,18 @@
     },
     "Until…" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حتى…"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bis …"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2252,6 +4082,12 @@
             "value" : "До…"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถึงเวลา…"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2262,6 +4098,18 @@
     },
     "Version %@" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الإصدار %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2274,6 +4122,12 @@
             "value" : "Версия %@"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เวอร์ชัน %@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2284,6 +4138,18 @@
     },
     "When macOS reports a critical temperature, for example in a closed bag." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عندما يُبلغ macOS عن حرارة حرجة، مثلًا داخل حقيبة مغلقة."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn macOS eine kritische Temperatur meldet, zum Beispiel in einer geschlossenen Tasche."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2296,6 +4162,12 @@
             "value" : "Когда macOS сообщает о критической температуре, например в закрытой сумке."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อ macOS รายงานอุณหภูมิวิกฤต เช่น อยู่ในกระเป๋าที่ปิด"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2306,6 +4178,18 @@
     },
     "When the timer ends or a safety rule turns it off." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عند انتهاء المؤقت أو إيقافه بقاعدة أمان."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn der Timer abläuft oder eine Sicherheitsregel es ausschaltet."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2318,6 +4202,12 @@
             "value" : "Когда заканчивается таймер или срабатывает защита."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อตัวจับเวลาสิ้นสุดหรือกฎความปลอดภัยปิดการทำงาน"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2328,6 +4218,18 @@
     },
     "When you put it to sleep or close the lid, Keep Awake is off after it wakes up." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "عندما تُدخل Mac في السكون أو تُغلق الغطاء، يكون الإبقاء مستيقظًا متوقفًا بعد الاستيقاظ."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wenn du ihn in den Ruhezustand versetzt oder zuklappst, ist Wach halten nach dem Aufwachen aus."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2340,6 +4242,12 @@
             "value" : "Если вы усыпили Mac или закрыли крышку, после пробуждения режим будет выключен."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อคุณสั่งให้ Mac พักหรือปิดฝา กันพักจะปิดหลังจาก Mac ตื่น"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2350,6 +4258,18 @@
     },
     "While %@ is running" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أثناء عمل %@"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solange %@ läuft"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2362,6 +4282,12 @@
             "value" : "Пока работает %@"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ขณะที่ %@ ทำงาน"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2372,6 +4298,18 @@
     },
     "Window" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "نافذة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fenster"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2384,6 +4322,12 @@
             "value" : "Окно"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หน้าต่าง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2394,6 +4338,18 @@
     },
     "You locked the screen, your Mac can sleep again." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "قفلت الشاشة، يمكن لـ Mac السكون مجددًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du hast den Bildschirm gesperrt, dein Mac darf wieder in den Ruhezustand."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2406,6 +4362,12 @@
             "value" : "Экран заблокирован, Mac снова может засыпать."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คุณล็อกหน้าจอแล้ว Mac จึงพักได้อีกครั้ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2416,6 +4378,18 @@
     },
     "Your Mac can sleep" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن لـ Mac السكون"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Mac darf schlafen"
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2428,6 +4402,12 @@
             "value" : "Mac может уснуть"
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac พักได้"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2438,6 +4418,18 @@
     },
     "Your Mac can sleep normally again." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "يمكن لـ Mac السكون بشكل طبيعي مجددًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Mac darf wieder normal in den Ruhezustand."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2450,6 +4442,12 @@
             "value" : "Mac снова может засыпать как обычно."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac พักได้ตามปกติอีกครั้ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2460,6 +4458,18 @@
     },
     "Your Mac is too hot, it can sleep again." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "حرارة Mac مرتفعة جدًا، يمكنه السكون مجددًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Mac ist zu heiß und darf wieder in den Ruhezustand."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2472,6 +4482,12 @@
             "value" : "Mac перегрелся и снова может засыпать."
           }
         },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac ร้อนเกินไป จึงพักได้อีกครั้ง"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2482,6 +4498,18 @@
     },
     "Your Mac went to sleep, so Keep Awake is off." : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "دخل Mac في السكون، لذا توقف الإبقاء مستيقظًا."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dein Mac war im Ruhezustand, deshalb ist Wach halten aus."
+          }
+        },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2492,6 +4520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mac уходил в сон, поэтому режим «Не засыпать» выключен."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mac เข้าสู่โหมดพักแล้ว กันพักจึงปิด"
           }
         },
         "zh-Hans" : {

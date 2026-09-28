@@ -146,6 +146,9 @@
 				ru,
 				ko,
 				"zh-Hans",
+				de,
+				th,
+				ar,
 			);
 			mainGroup = 7C1A00000000000000000002;
 			minimizedProjectReferenceProxies = 1;
