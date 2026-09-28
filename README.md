@@ -38,7 +38,7 @@ Built for those moments when you start a long build, deploy, AI agent, or remote
 - **Knows what else is going on.** The menu shows other apps and tools that are keeping your Mac awake and for how long, like a `caffeinate` someone forgot in a Terminal tab.
 - **Made for automation.** A command line tool, a `macaffeine://` URL scheme, Shortcuts actions and ready-made hooks for AI coding agents.
 - **Native and tiny.** Swift, AppKit and SwiftUI, about 1 MB zipped. Sandboxed, zero dependencies, zero network access.
-- **Speaks your language.** English, 한국어, 简体中文 and Русский, picked from your system language.
+- **Speaks your language.** English, Deutsch, 한국어, 简体中文, ไทย, العربية and Русский, picked from your system language.
 
 ## Install
 

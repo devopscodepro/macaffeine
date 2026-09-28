@@ -44,7 +44,7 @@ log stream --predicate 'subsystem == "pro.devopscode.Macaffeine"' --info
 
 All strings live in `Macaffeine/Resources/Localizable.xcstrings`. The easiest way to add or fix a language is to open the project in Xcode, select the string catalog and fill in the column for your language. Keep placeholders like `%@` and `%lld` exactly as they are.
 
-Currently: English, Korean, Simplified Chinese, Russian.
+Currently: English, German, Korean, Simplified Chinese, Thai, Arabic, Russian.
 
 ## License
 
