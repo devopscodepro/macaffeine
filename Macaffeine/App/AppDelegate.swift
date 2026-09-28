@@ -97,6 +97,12 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     // only shown while the settings window is open
     private func installMainMenu() {
         let appMenu = NSMenu()
+        appMenu.addItem(withTitle: String(localized: "About Macaffeine"), action: #selector(showAbout), keyEquivalent: "")
+        appMenu.addItem(.separator())
+        appMenu.addItem(withTitle: String(localized: "Settings…"), action: #selector(showSettings), keyEquivalent: ",")
+        appMenu.addItem(.separator())
+        appMenu.addItem(withTitle: String(localized: "Hide Macaffeine"), action: #selector(NSApplication.hide), keyEquivalent: "h")
+        appMenu.addItem(.separator())
         appMenu.addItem(withTitle: String(localized: "Quit Macaffeine"), action: #selector(NSApplication.terminate), keyEquivalent: "q")
 
         let windowMenu = NSMenu(title: String(localized: "Window"))
@@ -110,5 +116,13 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
         }
         NSApplication.shared.mainMenu = mainMenu
         NSApplication.shared.windowsMenu = windowMenu
+    }
+
+    @objc private func showAbout() {
+        AboutPanel.show()
+    }
+
+    @objc private func showSettings() {
+        settingsWindow?.show()
     }
 }

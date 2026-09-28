@@ -170,6 +170,28 @@
         }
       }
     },
+    "About Macaffeine" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine에 관하여"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "О программе Macaffeine"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关于 Macaffeine"
+          }
+        }
+      }
+    },
     "Active for Duration" : {
       "localizations" : {
         "ko" : {
@@ -694,6 +716,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "通用"
+          }
+        }
+      }
+    },
+    "Hide Macaffeine" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Macaffeine 가리기"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Скрыть Macaffeine"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隐藏 Macaffeine"
           }
         }
       }
@@ -1310,6 +1354,28 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "macOS 拒绝了请求，请重试。"
+          }
+        }
+      }
+    },
+    "Made by Aleksei Popov" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "제작: Aleksei Popov"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Автор — Алексей Попов"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "作者：Aleksei Popov"
           }
         }
       }
