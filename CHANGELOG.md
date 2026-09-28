@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Keep awake turns off after you put the Mac to sleep or close the lid (on by default), and optionally when you lock the screen. Holds from `macaffeine run` keep running.
 - Option to show the remaining time next to the menu bar icon.
 - The global shortcut can be changed or turned off in Settings.
-- Korean, Simplified Chinese and Russian localizations. The app follows the system language and falls back to English.
+- German, Korean, Simplified Chinese, Thai, Arabic (right-to-left) and Russian localizations. The app follows the system language and falls back to English.
 - Your own duration presets (add, remove, restore defaults).
 - Keep awake turns off by itself when the duration ends, including after the Mac wakes from sleep.
 - Global shortcut ⌃⌥⌘K to toggle.
