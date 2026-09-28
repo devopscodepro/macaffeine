@@ -10,6 +10,10 @@
 </p>
 
 <p align="center">
+  <a href="https://macaffeine.app"><b>macaffeine.app</b></a>
+</p>
+
+<p align="center">
   <a href="https://github.com/devopscodepro/macaffeine/releases/latest"><img src="https://img.shields.io/github/v/release/devopscodepro/macaffeine?label=download&color=A9612F" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/macOS-13%2B-5B321B" alt="macOS 13 or later">
   <a href="https://github.com/devopscodepro/macaffeine/actions/workflows/ci.yml"><img src="https://github.com/devopscodepro/macaffeine/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI"></a>
