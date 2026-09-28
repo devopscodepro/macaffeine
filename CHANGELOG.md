@@ -33,5 +33,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Global shortcut ⌃⌥⌘K to toggle.
 - Selected duration is remembered between launches.
 - Disk image with a drag-to-Applications window.
+- About Macaffeine window with version, author and links, in a standard app menu (About, Settings, Hide, Quit) while Settings are open.
 - App icon and a matching menu bar icon: an empty cup when off, a hot one with steam when on.
 - MIT license.
