@@ -24,6 +24,23 @@ die() {
     exit 1
 }
 
+# submit, then wait separately so a dropped connection doesn't lose the result
+notarize() {
+    file=$1
+    log=$2
+    id=$(xcrun notarytool submit "$file" --keychain-profile "$PROFILE" --output-format json | sed -n 's/.*"id" *: *"\([^"]*\)".*/\1/p')
+    [ -n "$id" ] || die "notarytool didn't return a submission id for $file"
+    echo "submitted $file as $id"
+    for attempt in 1 2 3 4 5; do
+        xcrun notarytool wait "$id" --keychain-profile "$PROFILE" --timeout 30m && break
+        echo "waiting for $id failed (attempt $attempt), retrying"
+        sleep 20
+    done
+    xcrun notarytool info "$id" --keychain-profile "$PROFILE" | tee "$log"
+    xcrun notarytool log "$id" --keychain-profile "$PROFILE" "${log%.log}-details.json" >/dev/null 2>&1 || true
+    grep -q "status: Accepted" "$log" || die "notarization of $file was not accepted, see $log"
+}
+
 VERSION=$(sed -n 's/.*MARKETING_VERSION = \(.*\);/\1/p' Macaffeine.xcodeproj/project.pbxproj | sort -u)
 [ "$(echo "$VERSION" | wc -l | tr -d ' ')" = 1 ] || die "MARKETING_VERSION differs between configurations"
 BUILD=$(git rev-list --count HEAD)
@@ -61,8 +78,7 @@ codesign --verify --strict --deep "$APP"
 if [ $DRY_RUN = 0 ]; then
     step "Notarizing"
     ditto -c -k --keepParent "$APP" "$OUT/notarize.zip"
-    xcrun notarytool submit "$OUT/notarize.zip" --keychain-profile "$PROFILE" --wait | tee "$OUT/notarize.log"
-    grep -q "status: Accepted" "$OUT/notarize.log" || die "notarization was not accepted, see $OUT/notarize.log"
+    notarize "$OUT/notarize.zip" "$OUT/notarize.log"
     rm "$OUT/notarize.zip"
     xcrun stapler staple "$APP"
     spctl --assess --type execute --verbose "$APP"
@@ -78,8 +94,7 @@ else
     scripts/make-dmg.sh "$APP" "$DMG" >/dev/null
     if [ $DRY_RUN = 0 ]; then
         codesign --force --timestamp --sign "$IDENTITY" "$DMG"
-        xcrun notarytool submit "$DMG" --keychain-profile "$PROFILE" --wait | tee "$OUT/notarize-dmg.log"
-        grep -q "status: Accepted" "$OUT/notarize-dmg.log" || die "disk image notarization was not accepted, see $OUT/notarize-dmg.log"
+        notarize "$DMG" "$OUT/notarize-dmg.log"
         xcrun stapler staple "$DMG"
     fi
 fi
