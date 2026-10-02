@@ -48,6 +48,12 @@ Built for those moments when you start a long build, deploy, AI agent, or remote
 
 A `.zip` is there too if you prefer it.
 
+Or with [Homebrew](https://brew.sh) — this also puts the `macaffeine` command line tool on your `PATH`:
+
+```sh
+brew install --cask devopscodepro/tap/macaffeine
+```
+
 Builds are signed with a Developer ID and notarized by Apple. Requires macOS 13 Ventura or later, runs natively on Apple silicon and Intel.
 
 ## Using it
@@ -98,7 +104,7 @@ The cup is empty when your Mac can sleep and steaming when Macaffeine keeps it a
 
 ## Automation
 
-Install the command line tool once (Settings → General shows the command with a Copy button), then:
+Installed with Homebrew? The `macaffeine` command is already there. Otherwise install it once (Settings → General shows the command with a Copy button), then:
 
 ```sh
 macaffeine run -- make release      # awake while the command runs

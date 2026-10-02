@@ -11,7 +11,7 @@ Your Mac stays awake while there's a session or at least one hold. Turning Keep 
 
 ## Command line
 
-Install the `macaffeine` command once (Settings → General shows the exact command with a Copy button):
+If you installed Macaffeine with Homebrew (`brew install --cask devopscodepro/tap/macaffeine`), the `macaffeine` command is already on your `PATH`. Otherwise install it once (Settings → General shows the exact command with a Copy button):
 
 ```sh
 sudo mkdir -p /usr/local/bin
